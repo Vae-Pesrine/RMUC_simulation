@@ -1,0 +1,2 @@
+laser_simulator/livox_laser_simulation:laser_simulator/sensor_scan_generation:sentry_simulation
+-DCMAKE_BUILD_TYPE=RelWithDebInfo -DCATKIN_DEVEL_PREFIX=/home/jgy/RMUC_simulation/devel -DCMAKE_INSTALL_PREFIX=/home/jgy/RMUC_simulation/install -G Unix Makefiles

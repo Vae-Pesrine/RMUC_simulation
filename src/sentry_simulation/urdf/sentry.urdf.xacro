@@ -1,0 +1,6 @@
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="example">
+
+  <xacro:include filename="$(find sentry_simulation)/urdf/sentry_base.urdf.xacro" />
+  <xacro:include filename="$(find sentry_simulation)/urdf/livox_mid360.urdf.xacro" />
+
+</robot>

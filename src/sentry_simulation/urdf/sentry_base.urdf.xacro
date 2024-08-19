@@ -1,0 +1,196 @@
+<robot name="sentry_base" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- Defining the colors used in this robot  -->
+    <material name="Black">
+        <color rgba="0 0 0 1" />
+    </material>
+
+    <material name="White">
+        <color rgba="1 1 1 1" />
+    </material>
+
+    <material name="Blue">
+        <color rgba="0 0 1 1" />
+    </material>
+
+    <material name="Red">
+        <color rgba="1 0 0 1" />
+    </material>
+
+    <material name="Brown">
+        <color rgba="0.647 0.165 0.165 1" />
+    </material>
+
+    <xacro:property name="PI" value="3.1415926"/> 
+	<xacro:property name="length_wheel" value="0.05" />
+	<xacro:property name="radius_wheel" value="0.06" />
+
+    <!-- Inertial matrix  -->
+    <xacro:macro name="inertial_matrix" params="mass">
+        <inertial>
+            <mass value="${mass}" />
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01" />
+        </inertial>
+    </xacro:macro>
+
+    <xacro:macro name="gazebo_material" params="ref color">
+        <gazebo reference="${ref}">
+            <pose>7.401661 5.841537 0.060000 0.000001 0.000001 1.577204</pose>
+            <material>Gazebo/${color}</material>
+        </gazebo>
+    </xacro:macro>
+
+    <!-- //////////////////////////////// all base links of sentry ////////////////////////////////// -->
+    <link name="base_footprint">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.001 0.001 0.001" />
+            </geometry>
+            <material name="Blue" />
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.1" />
+            </geometry>
+        </collision>
+        <xacro:inertial_matrix mass="0.0001"/>
+    </link>
+
+    <link name="base_link">
+        <visual>
+            <origin xyz="0 0 0.05" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.2 0.3 0.1"/>
+            </geometry>
+            <material name="White" />
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.05" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.3 0.2 0.15"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_matrix mass="8.2" />
+    </link>
+
+    <link name="left_front_wheel">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="${radius_wheel}" length="${length_wheel}" />
+            </geometry>
+            <material name="Black" />
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="${radius_wheel}" length="${length_wheel}" />
+            </geometry>
+        </collision>
+        <xacro:inertial_matrix mass="0.5" />
+    </link>
+
+    <link name="right_front_wheel">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="${radius_wheel}" length="${length_wheel}" />
+            </geometry>
+            <material name="Black" />
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="${radius_wheel}" length="${length_wheel}" />
+            </geometry>
+        </collision>
+        <xacro:inertial_matrix mass="0.5" />
+    </link>
+
+    <link name="left_rear_wheel">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="${radius_wheel}" length="${length_wheel}" />
+            </geometry>
+            <material name="Red" />
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="${radius_wheel}" length="${length_wheel}" />
+            </geometry>
+        </collision>
+        <xacro:inertial_matrix mass="0.5" />
+    </link>
+
+    <link name="right_rear_wheel">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="${radius_wheel}" length="${length_wheel}" />
+            </geometry>
+            <material name="Red" />
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <cylinder radius="${radius_wheel}" length="${length_wheel}" />
+            </geometry>
+        </collision>
+        <xacro:inertial_matrix mass="0.5" />
+    </link>
+
+    <!-- //////////////////////////////// all joints ////////////////////////////////// -->
+
+	<joint name="base_footprint_joint" type="fixed">
+		<origin xyz="0 0 0" />
+		<parent link="base_footprint" />
+		<child link="base_link" />
+	</joint>
+
+    <joint name="base_to_wheel1" type="continuous">
+        <parent link="base_link"/>
+        <child link="left_front_wheel"/>
+        <origin rpy="${-PI/2} 0 0" xyz="0.1 0.13 0"/>
+        <axis xyz="0 0 1" />
+    </joint>
+
+    <joint name="base_to_wheel2" type="continuous">
+        <axis xyz="0 0 1" />
+        <anchor xyz="0 0 0" />
+        <limit effort="100" velocity="100" />
+        <parent link="base_link"/>
+        <child link="left_rear_wheel"/>
+        <origin rpy="${-PI/2} 0 0" xyz="-0.1 0.13 0"/>
+    </joint>
+
+    <joint name="base_to_wheel3" type="continuous">
+        <axis xyz="0 0 1" />
+        <anchor xyz="0 0 0" />
+        <limit effort="100" velocity="100" />
+        <parent link="base_link"/>
+        <child link="right_front_wheel"/>
+        <origin rpy="${-PI/2} 0 0" xyz="0.1 -0.13 0"/>
+    </joint>
+
+    <joint name="base_to_wheel4" type="continuous">
+        <axis xyz="0 0 1" />
+        <anchor xyz="0 0 0" />
+        <limit effort="100" velocity="100" />
+        <parent link="base_link"/>
+        <child link="right_rear_wheel"/>
+        <origin rpy="${-PI/2} 0 0" xyz="-0.1 -0.13 0"/>
+    </joint>
+
+    <!-- //////////////////////////////// gazebo ////////////////////////////////// -->
+    <xacro:gazebo_material ref="base_footprint"    color="White" />
+    <xacro:gazebo_material ref="base_link"         color="Orange" />
+    <xacro:gazebo_material ref="left_front_wheel"  color="Black" />
+    <xacro:gazebo_material ref="right_front_wheel" color="Black" />
+    <xacro:gazebo_material ref="left_rear_wheel"   color="Red" />
+    <xacro:gazebo_material ref="right_rear_wheel"  color="Red" />
+
+</robot>

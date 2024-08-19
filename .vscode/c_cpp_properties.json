@@ -1,0 +1,51 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/jgy/rm2023_auto_sentry_ws-main/devel/include/**",
+        "/home/jgy/ROS_base/devel/include/**",
+        "/home/jgy/RM_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/jgy/ROS_base/src/action_tutorials/include/**",
+        "/home/jgy/RM_ws/src/navigation/amcl/include/**",
+        "/home/jgy/rm2023_auto_sentry_ws-main/src/auto_nav/include/**",
+        "/home/jgy/RM_ws/src/navigation/base_local_planner/include/**",
+        "/home/jgy/RM_ws/src/navigation/carrot_planner/include/**",
+        "/home/jgy/RM_ws/src/navigation/clear_costmap_recovery/include/**",
+        "/home/jgy/RM_ws/src/navigation/costmap_2d/include/**",
+        "/home/jgy/RM_ws/src/costmap_prohibition_layer/include/**",
+        "/home/jgy/RM_ws/src/navigation/dwa_local_planner/include/**",
+        "/home/jgy/ROS_base/src/dynamic_tutorials/include/**",
+        "/home/jgy/RM_ws/src/navigation/global_planner/include/**",
+        "/home/jgy/RM_ws/src/hero_description/include/**",
+        "/home/jgy/ROS_base/src/learning_communication/include/**",
+        "/home/jgy/ROS_base/src/learning_tf/include/**",
+        "/home/jgy/RM_ws/src/navigation/map_server/include/**",
+        "/home/jgy/ROS_base/src/marm_planning/include/**",
+        "/home/jgy/RM_ws/src/navigation/move_base/include/**",
+        "/home/jgy/RM_ws/src/navigation/move_slow_and_clear/include/**",
+        "/home/jgy/RM_ws/src/navigation/nav_core/include/**",
+        "/home/jgy/RM_ws/src/nav_demo/include/**",
+        "/home/jgy/RM_ws/src/navigation/navfn/include/**",
+        "/home/jgy/RM_ws/src/pcl/include/**",
+        "/home/jgy/ROS_base/src/pluginlib_tutorials/include/**",
+        "/home/jgy/RM_ws/src/pointcloud_to_laserscan/include/**",
+        "/home/jgy/RM_ws/src/navigation/rotate_recovery/include/**",
+        "/home/jgy/ROS_base/src/rviz_teleop_commander/include/**",
+        "/home/jgy/rm2023_auto_sentry_ws-main/src/scan_to_map/include/**",
+        "/home/jgy/RM_ws/src/navigation/voxel_grid/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

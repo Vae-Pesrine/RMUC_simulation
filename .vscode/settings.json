@@ -1,0 +1,14 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/jgy/rm2023_auto_sentry_ws-main/devel/lib/python3/dist-packages",
+        "/home/jgy/ROS_base/devel/lib/python3/dist-packages",
+        "/home/jgy/RM_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/jgy/rm2023_auto_sentry_ws-main/devel/lib/python3/dist-packages",
+        "/home/jgy/ROS_base/devel/lib/python3/dist-packages",
+        "/home/jgy/RM_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
+}
