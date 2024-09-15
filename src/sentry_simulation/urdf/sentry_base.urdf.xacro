@@ -20,27 +20,32 @@
         <color rgba="0.647 0.165 0.165 1" />
     </material>
 
-    <xacro:property name="PI" value="3.1415926"/> 
+    <xacro:property name="PI" value="3.1415926" /> 
 	<xacro:property name="length_wheel" value="0.05" />
 	<xacro:property name="radius_wheel" value="0.06" />
+    <xacro:property name="mass_wheel" value="150" />
+    <xacro:property name="mass_baselink" value="250" />
 
     <!-- Inertial matrix  -->
     <xacro:macro name="inertial_matrix" params="mass">
         <inertial>
             <mass value="${mass}" />
             <origin xyz="0 0 0" rpy="0 0 0" />
-            <inertia ixx="0.01" ixy="0.0" ixz="0.0" iyy="0.01" iyz="0.0" izz="0.01" />
+            <inertia ixx="2.3319" ixy="3.6592E-17" ixz="-4.7325E-18" 
+                     iyy="2.4738" iyz="-2.8587E-19" izz="4.7802" />
         </inertial>
     </xacro:macro>
 
     <xacro:macro name="gazebo_material" params="ref color">
         <gazebo reference="${ref}">
-            <pose>7.401661 5.841537 0.060000 0.000001 0.000001 1.577204</pose>
+            <pose>0 0 0 0 0 0</pose>
             <material>Gazebo/${color}</material>
         </gazebo>
     </xacro:macro>
 
     <!-- //////////////////////////////// all base links of sentry ////////////////////////////////// -->
+    <link name="dummy" />
+
     <link name="base_footprint">
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
@@ -55,7 +60,7 @@
                 <box size="0.1 0.1 0.1" />
             </geometry>
         </collision>
-        <xacro:inertial_matrix mass="0.0001"/>
+        <xacro:inertial_matrix mass="0.000001"/>
     </link>
 
     <link name="base_link">
@@ -72,7 +77,7 @@
                 <box size="0.3 0.2 0.15"/>
             </geometry>
         </collision>
-        <xacro:inertial_matrix mass="8.2" />
+        <xacro:inertial_matrix mass="${mass_baselink}" />
     </link>
 
     <link name="left_front_wheel">
@@ -89,7 +94,7 @@
                 <cylinder radius="${radius_wheel}" length="${length_wheel}" />
             </geometry>
         </collision>
-        <xacro:inertial_matrix mass="0.5" />
+        <xacro:inertial_matrix mass="${mass_wheel}" />
     </link>
 
     <link name="right_front_wheel">
@@ -106,7 +111,7 @@
                 <cylinder radius="${radius_wheel}" length="${length_wheel}" />
             </geometry>
         </collision>
-        <xacro:inertial_matrix mass="0.5" />
+        <xacro:inertial_matrix mass="${mass_wheel}" />
     </link>
 
     <link name="left_rear_wheel">
@@ -123,7 +128,7 @@
                 <cylinder radius="${radius_wheel}" length="${length_wheel}" />
             </geometry>
         </collision>
-        <xacro:inertial_matrix mass="0.5" />
+        <xacro:inertial_matrix mass="${mass_wheel}" />
     </link>
 
     <link name="right_rear_wheel">
@@ -140,10 +145,14 @@
                 <cylinder radius="${radius_wheel}" length="${length_wheel}" />
             </geometry>
         </collision>
-        <xacro:inertial_matrix mass="0.5" />
+        <xacro:inertial_matrix mass="${mass_wheel}" />
     </link>
 
     <!-- //////////////////////////////// all joints ////////////////////////////////// -->
+    <joint name="dummy_joint" type="fixed">
+        <parent link="dummy" />
+        <child link="base_footprint" />
+    </joint>
 
 	<joint name="base_footprint_joint" type="fixed">
 		<origin xyz="0 0 0" />
@@ -152,10 +161,12 @@
 	</joint>
 
     <joint name="base_to_wheel1" type="continuous">
+        <axis xyz="0 0 1" />
+        <anchor xyz="0 0 0" />
+        <limit effort="100" velocity="100" />
         <parent link="base_link"/>
         <child link="left_front_wheel"/>
         <origin rpy="${-PI/2} 0 0" xyz="0.1 0.13 0"/>
-        <axis xyz="0 0 1" />
     </joint>
 
     <joint name="base_to_wheel2" type="continuous">
@@ -191,6 +202,30 @@
     <xacro:gazebo_material ref="left_front_wheel"  color="Black" />
     <xacro:gazebo_material ref="right_front_wheel" color="Black" />
     <xacro:gazebo_material ref="left_rear_wheel"   color="Red" />
-    <xacro:gazebo_material ref="right_rear_wheel"  color="Red" />
+    <xacro:gazebo_material ref="right_rear_wheel"  color="Red" />   
+
+    <!-- //// ////////////////////////////// driver controller //////////////////////////////////  -->
+    <gazebo>
+        <plugin name="mecanum_controller" filename="libgazebo_ros_planar_move.so">
+            <always_on>true</always_on>
+            <updateRate>100.0</updateRate>
+            <robotNamespace>/</robotNamespace>
+            <commandTopic>cmd_vel</commandTopic>
+            <odometryTopic>odom</odometryTopic>
+            <odometryFrame>odom</odometryFrame>
+            <leftFrontJoint>base_to_wheel1</leftFrontJoint>
+            <rightFrontJoint>base_to_wheel3</rightFrontJoint>
+            <leftRearJoint>base_to_wheel2</leftRearJoint>
+            <rightRearJoint>base_to_wheel4</rightRearJoint>
+            <wheelSeparation>0.26</wheelSeparation>
+            <wheelDiameter>0.12</wheelDiameter>
+            <odometryRate>20.0</odometryRate>
+            <torque>2</torque>
+            <robotBaseFrame>base_footprint</robotBaseFrame>
+            <publishOdomTF>true</publishOdomTF>
+            <broadcastTF>true</broadcastTF>
+            <cmdTimeout>1.0</cmdTimeout>
+        </plugin>
+    </gazebo>
 
 </robot>

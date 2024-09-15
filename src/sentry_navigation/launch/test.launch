@@ -1,0 +1,10 @@
+<launch>
+    <node pkg="sentry_navigation" type="overallmap" name="overallmap" output="screen">
+        <param name="mapfile" value="/home/jgy/RMUC_simulation/src/sentry_navigation/map/map.pcd" />
+        <param name="OverallMapVoxelSize" type="double" value="0.05" />
+        <param name="OverallMapDisplayInterval" type="int" value="2" />
+    </node>
+
+    <node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz" args="-d $(find sentry_navigation)/rviz/test.rviz" respawn="true"/>
+
+</launch>

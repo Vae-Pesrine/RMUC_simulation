@@ -5118,4 +5118,6 @@ laser_simulator/livox_laser_simulation/CMakeFiles/livox_laser_simulation.dir/src
  /usr/include/pcl-1.10/pcl/io/lzf.h
  /home/jgy/RMUC_simulation/src/laser_simulator/livox_laser_simulation/include/livox_laser_simulation/csv_reader.hpp
  /home/jgy/RMUC_simulation/src/laser_simulator/livox_laser_simulation/include/livox_laser_simulation/livox_ode_multiray_shape.h
+ /home/jgy/RMUC_simulation/devel/include/livox_ros_driver2/CustomMsg.h
+ /home/jgy/RMUC_simulation/devel/include/livox_ros_driver2/CustomPoint.h
 

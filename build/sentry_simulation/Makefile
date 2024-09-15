@@ -1264,42 +1264,80 @@ tf2_msgs_generate_messages_py/fast:
 .PHONY : tf2_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-sentry_simulation/CMakeFiles/vehicleSimulator.dir/rule:
-	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentry_simulation/CMakeFiles/vehicleSimulator.dir/rule
-.PHONY : sentry_simulation/CMakeFiles/vehicleSimulator.dir/rule
+sentry_simulation/CMakeFiles/vehicle_simulator.dir/rule:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentry_simulation/CMakeFiles/vehicle_simulator.dir/rule
+.PHONY : sentry_simulation/CMakeFiles/vehicle_simulator.dir/rule
 
 # Convenience name for target.
-vehicleSimulator: sentry_simulation/CMakeFiles/vehicleSimulator.dir/rule
-.PHONY : vehicleSimulator
+vehicle_simulator: sentry_simulation/CMakeFiles/vehicle_simulator.dir/rule
+.PHONY : vehicle_simulator
 
 # fast build rule for target.
-vehicleSimulator/fast:
-	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/vehicleSimulator.dir/build.make sentry_simulation/CMakeFiles/vehicleSimulator.dir/build
-.PHONY : vehicleSimulator/fast
+vehicle_simulator/fast:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/vehicle_simulator.dir/build.make sentry_simulation/CMakeFiles/vehicle_simulator.dir/build
+.PHONY : vehicle_simulator/fast
 
-src/vehicleSimulator.o: src/vehicleSimulator.cpp.o
-.PHONY : src/vehicleSimulator.o
+# Convenience name for target.
+sentry_simulation/CMakeFiles/key_control.dir/rule:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentry_simulation/CMakeFiles/key_control.dir/rule
+.PHONY : sentry_simulation/CMakeFiles/key_control.dir/rule
+
+# Convenience name for target.
+key_control: sentry_simulation/CMakeFiles/key_control.dir/rule
+.PHONY : key_control
+
+# fast build rule for target.
+key_control/fast:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/key_control.dir/build.make sentry_simulation/CMakeFiles/key_control.dir/build
+.PHONY : key_control/fast
+
+src/key_control.o: src/key_control.cpp.o
+.PHONY : src/key_control.o
 
 # target to build an object file
-src/vehicleSimulator.cpp.o:
-	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/vehicleSimulator.dir/build.make sentry_simulation/CMakeFiles/vehicleSimulator.dir/src/vehicleSimulator.cpp.o
-.PHONY : src/vehicleSimulator.cpp.o
+src/key_control.cpp.o:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/key_control.dir/build.make sentry_simulation/CMakeFiles/key_control.dir/src/key_control.cpp.o
+.PHONY : src/key_control.cpp.o
 
-src/vehicleSimulator.i: src/vehicleSimulator.cpp.i
-.PHONY : src/vehicleSimulator.i
+src/key_control.i: src/key_control.cpp.i
+.PHONY : src/key_control.i
 
 # target to preprocess a source file
-src/vehicleSimulator.cpp.i:
-	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/vehicleSimulator.dir/build.make sentry_simulation/CMakeFiles/vehicleSimulator.dir/src/vehicleSimulator.cpp.i
-.PHONY : src/vehicleSimulator.cpp.i
+src/key_control.cpp.i:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/key_control.dir/build.make sentry_simulation/CMakeFiles/key_control.dir/src/key_control.cpp.i
+.PHONY : src/key_control.cpp.i
 
-src/vehicleSimulator.s: src/vehicleSimulator.cpp.s
-.PHONY : src/vehicleSimulator.s
+src/key_control.s: src/key_control.cpp.s
+.PHONY : src/key_control.s
 
 # target to generate assembly for a file
-src/vehicleSimulator.cpp.s:
-	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/vehicleSimulator.dir/build.make sentry_simulation/CMakeFiles/vehicleSimulator.dir/src/vehicleSimulator.cpp.s
-.PHONY : src/vehicleSimulator.cpp.s
+src/key_control.cpp.s:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/key_control.dir/build.make sentry_simulation/CMakeFiles/key_control.dir/src/key_control.cpp.s
+.PHONY : src/key_control.cpp.s
+
+src/vehicle_simulator.o: src/vehicle_simulator.cpp.o
+.PHONY : src/vehicle_simulator.o
+
+# target to build an object file
+src/vehicle_simulator.cpp.o:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/vehicle_simulator.dir/build.make sentry_simulation/CMakeFiles/vehicle_simulator.dir/src/vehicle_simulator.cpp.o
+.PHONY : src/vehicle_simulator.cpp.o
+
+src/vehicle_simulator.i: src/vehicle_simulator.cpp.i
+.PHONY : src/vehicle_simulator.i
+
+# target to preprocess a source file
+src/vehicle_simulator.cpp.i:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/vehicle_simulator.dir/build.make sentry_simulation/CMakeFiles/vehicle_simulator.dir/src/vehicle_simulator.cpp.i
+.PHONY : src/vehicle_simulator.cpp.i
+
+src/vehicle_simulator.s: src/vehicle_simulator.cpp.s
+.PHONY : src/vehicle_simulator.s
+
+# target to generate assembly for a file
+src/vehicle_simulator.cpp.s:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/vehicle_simulator.dir/build.make sentry_simulation/CMakeFiles/vehicle_simulator.dir/src/vehicle_simulator.cpp.s
+.PHONY : src/vehicle_simulator.cpp.s
 
 # Help Target
 help:
@@ -1392,10 +1430,14 @@ help:
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_py"
-	@echo "... vehicleSimulator"
-	@echo "... src/vehicleSimulator.o"
-	@echo "... src/vehicleSimulator.i"
-	@echo "... src/vehicleSimulator.s"
+	@echo "... key_control"
+	@echo "... vehicle_simulator"
+	@echo "... src/key_control.o"
+	@echo "... src/key_control.i"
+	@echo "... src/key_control.s"
+	@echo "... src/vehicle_simulator.o"
+	@echo "... src/vehicle_simulator.i"
+	@echo "... src/vehicle_simulator.s"
 .PHONY : help
 
 

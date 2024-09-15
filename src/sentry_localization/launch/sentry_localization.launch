@@ -1,0 +1,13 @@
+<launch>
+    <arg name="nodelet_manager" default="sentry_nodelet" />
+    <node pkg="nodelet" type="nodelet" name="sentry_nodelet" args="$(arg nodelet_manager)" output="screen" />
+
+    <!-- globalmap server nodelet -->
+    <node pkg="nodelet" type="nodelet" name="globalmap_server_nodelet" args="load sentry_localization/GlobalmapServerNodelet $(nodelet_manager)">
+        <param name="globalmap_pcdfile" value="$(find sentry_localization)/map/RMUC.pcd" />
+        <param name="voxelGridFilterSize" value="0.05" />
+    </node>
+
+    <node pkg="" />
+    </node>
+</launch>

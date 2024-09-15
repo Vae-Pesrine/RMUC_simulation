@@ -5115,7 +5115,9 @@ laser_simulator/livox_laser_simulation/CMakeFiles/livox_laser_simulation.dir/src
   /usr/include/x86_64-linux-gnu/sys/fcntl.h \
   /usr/include/pcl-1.10/pcl/io/lzf.h \
   /home/jgy/RMUC_simulation/src/laser_simulator/livox_laser_simulation/include/livox_laser_simulation/csv_reader.hpp \
-  /home/jgy/RMUC_simulation/src/laser_simulator/livox_laser_simulation/include/livox_laser_simulation/livox_ode_multiray_shape.h
+  /home/jgy/RMUC_simulation/src/laser_simulator/livox_laser_simulation/include/livox_laser_simulation/livox_ode_multiray_shape.h \
+  /home/jgy/RMUC_simulation/devel/include/livox_ros_driver2/CustomMsg.h \
+  /home/jgy/RMUC_simulation/devel/include/livox_ros_driver2/CustomPoint.h
 
 
 /usr/include/pcl-1.10/pcl/io/lzf.h:
@@ -6036,6 +6038,8 @@ laser_simulator/livox_laser_simulation/CMakeFiles/livox_laser_simulation.dir/src
 
 /usr/include/boost/asio/handler_invoke_hook.hpp:
 
+/home/jgy/RMUC_simulation/devel/include/livox_ros_driver2/CustomPoint.h:
+
 /usr/include/boost/asio/detail/handler_invoke_helpers.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/ioctl-types.h:
@@ -6519,6 +6523,8 @@ laser_simulator/livox_laser_simulation/CMakeFiles/livox_laser_simulation.dir/src
 /usr/include/boost/iterator/iterator_concepts.hpp:
 
 /usr/include/boost/regex/v4/syntax_type.hpp:
+
+/home/jgy/RMUC_simulation/devel/include/livox_ros_driver2/CustomMsg.h:
 
 /usr/include/boost/preprocessor/facilities/expand.hpp:
 

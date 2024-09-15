@@ -40,6 +40,7 @@ include_directories(
   ${OpenCV_INCLUDE_DIRS}
   ${PCL_INCLUDE_DIRS}
   "${PROJECT_SOURCE_DIR}/include"
+  ~/RMUC_simulation/src/sentry_simulation/include
   /usr/local/include # Location when using 'make system_install'
   /usr/include       # More usual location (e.g. when installing using a package)
 )
@@ -51,16 +52,20 @@ link_directories(
 )
 
 ## Declare executables
-add_executable(vehicleSimulator src/vehicleSimulator.cpp)
+add_executable(vehicle_simulator ${PROJECT_SOURCE_DIR}/src/vehicle_simulator.cpp)
+add_executable(key_control ${PROJECT_SOURCE_DIR}/src/key_control.cpp)
+
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(vehicleSimulator ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${PCL_LIBRARIES})
+target_link_libraries(vehicle_simulator ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${PCL_LIBRARIES})
+target_link_libraries(key_control ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${PCL_LIBRARIES})
 
-install(TARGETS vehicleSimulator
+install(TARGETS vehicle_simulator
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
+
 
 install(DIRECTORY launch/
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch

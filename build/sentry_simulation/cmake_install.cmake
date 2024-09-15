@@ -58,21 +58,21 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sentry_simulation/vehicleSimulator" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sentry_simulation/vehicleSimulator")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sentry_simulation/vehicle_simulator" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sentry_simulation/vehicle_simulator")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sentry_simulation/vehicleSimulator"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sentry_simulation/vehicle_simulator"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/sentry_simulation" TYPE EXECUTABLE FILES "/home/jgy/RMUC_simulation/devel/lib/sentry_simulation/vehicleSimulator")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sentry_simulation/vehicleSimulator" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sentry_simulation/vehicleSimulator")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/sentry_simulation" TYPE EXECUTABLE FILES "/home/jgy/RMUC_simulation/devel/lib/sentry_simulation/vehicle_simulator")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sentry_simulation/vehicle_simulator" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sentry_simulation/vehicle_simulator")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sentry_simulation/vehicleSimulator"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sentry_simulation/vehicle_simulator"
          OLD_RPATH "/usr/local/lib:/opt/ros/noetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sentry_simulation/vehicleSimulator")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/sentry_simulation/vehicle_simulator")
     endif()
   endif()
 endif()
