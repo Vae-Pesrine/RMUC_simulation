@@ -127,7 +127,9 @@ private :
 
   void correct()
   {
-    VectorXt extension
+    VectorXt extension_mean_pred = VectorXt::Zero(N + K, 1);
+    MatrixXt extension_cov_pred = MatrixXt::Zero(N + K, N + K);
+    
 
 
   }
