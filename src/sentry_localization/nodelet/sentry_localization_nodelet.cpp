@@ -10,6 +10,7 @@
 //pcl library
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
+#include <pcl_ros/point_cloud.h>
 #include <pcl_ros/transforms.h>
 #include <pcl_conversions/pcl_conversions.h>
 #include <pcl/filters/voxel_grid.h>
@@ -63,7 +64,7 @@ public :
 
         pr_nh.getParam("global_localization_switch", global_localization_switch);
         if(global_localization_switch){
-            std::cout << "\033[32mWaiting for global localization services" << "\033[0m" << std::endl;
+            std::cout << GREEN << "Waiting for global localization services" << RESET << std::endl;
             ros::service::waitForService("/sentry_userdefinition/set_globalmap");
             ros::service::waitForService("/sentry_userdefinition/query");
             set_globalmap_service = nh.serviceClient<sentry_userdefinition::SetGlobalMap>("/sentry_userdefinition/set_globalmap");
@@ -92,10 +93,10 @@ private :
         voxelGridFilter->setLeafSize(voxelGridFilterSize, voxelGridFilterSize, voxelGridFilterSize);
         downsample_filter = voxelGridFilter;
 
-        std::cout << "\033[32mCreate registration NDT for localization" << "\033[0m" << std::endl;
+        std::cout << GREEN << "Create registration NDT for localization" << RESET << std::endl;
         registration = createRegistration();
 
-        std::cout << "\033[32mCreate registration method for fallback during relocalization" << "\033[0m" << std::endl;
+        std::cout << GREEN << "Create registration method for fallback during relocalization" << RESET << std::endl;
         relocalization_switch = false;
         delta_estimator.reset(new DeltaEstimator(createRegistration()));
 
@@ -121,7 +122,7 @@ private :
 
     void pointsCb(const sensor_msgs::PointCloud2::ConstPtr points_msg){
         if(!globalmap_cloud){
-            NODELET_ERROR("Globalmap has not been received!");
+            std::cout << RED << "Globalmap has not been received!" << RESET << std::endl;
             return;
         }
 
@@ -130,7 +131,7 @@ private :
         pcl::fromROSMsg(*points_msg, *livox_cloud);
 
         if(livox_cloud->empty()){
-            NODELET_ERROR("No livox cloud!");
+            std::cout << RED << "No livox cloud!" << RESET << std::endl;
             return;        
         }
 
@@ -139,12 +140,12 @@ private :
         pcl::PointCloud<pcl::PointXYZI>::Ptr livox_cloud_out(new pcl::PointCloud<pcl::PointXYZI>());
         if(this->tf_buffer.canTransform(base_frame_id, livox_cloud->header.frame_id, stamp, ros::Duration(1.0), &tf_error)){
             if(!pcl_ros::transformPointCloud(base_frame_id, *livox_cloud, *livox_cloud_out, this->tf_buffer)){
-                NODELET_ERROR("Couldn't transform livox cloud to target frame!");
+                std::cout << RED << "Could not transform livox cloud to target frame!" << RESET << std::endl;
                 return;
             }
         }
         else{
-            NODELET_ERROR(tf_error.c_str());
+            std::cout << RED << tf_error << RESET  << std::endl;
             return;
         }
 
@@ -159,7 +160,7 @@ private :
 
         std::lock_guard<std::mutex> pose_estimator_lock(pose_estimator_mutex);
         if(!pose_estimator){
-            NODELET_ERROR("Waiting for initial pose input !");
+            std::cout << BLUE << "Waiting for initial pose input!" << RESET << std::endl;
             return;
         }
 
@@ -328,15 +329,15 @@ private :
         registration->setInputTarget(globalmap_cloud);
 
         if(global_localization_switch){
-            std::cout << "\033[032mSet globalmap for global localization" << "\033[0m" << std::endl;
+            std::cout << GREEN << "Set globalmap for global localization" << RESET << std::endl;
             sentry_userdefinition::SetGlobalMap srv;
             pcl::toROSMsg(*globalmap_cloud, srv.request.global_map);
 
             if(!set_globalmap_service.call(srv)){
-                std::cout << "\033[32mFailed to set globalmap" << "\033[0m" << std::endl;
+                std::cout << RED << "Failed to set globalmap!" << RESET << std::endl;
             }
             else{
-                std::cout << "\033[32mSet globalmap successfully" << "\033[0m" << std::endl;
+                std::cout << GREEN << "Set globalmap successfully" << RESET << std::endl;
             }
         }
     }
@@ -353,7 +354,7 @@ private :
         srv.request.max_num_candidates = 1;
         if(!query_globallocalization_service.call(srv) || srv.response.poses.empty()){
             relocalization_switch = false;
-            std::cout << "\033[31mGlobal localization failed" << "\033[31m]" << std::endl;
+            std::cout << RED << "Global localization falied" << RESET << std::endl;
             return false;
         }
         
@@ -437,6 +438,16 @@ private :
 
     ros::ServiceClient set_globalmap_service;
     ros::ServiceClient query_globallocalization_service;
+
+    //std::cout 转义序列前缀
+    const std::string RESET = "\033[0m";
+    const std::string BLACK = "\033[30m";
+    const std::string RED = "\033[31m";
+    const std::string GREEN = "\033[32m";
+    const std::string YELLOW = "\033[33m";
+    const std::string BLUE = "\033[34m";
+    const std::string PURPLE_RED = "\033[35m";
+    const std::string WHITE = "\033[37m";    
 };
 
 }

@@ -4,6 +4,7 @@ project(sentry_localization)
 find_package(catkin REQUIRED COMPONENTS
   nodelet  
   pcl_ros
+  pcl_conversions
   roscpp
   rospy
   std_msgs
@@ -23,13 +24,15 @@ find_package(catkin REQUIRED COMPONENTS
 include_directories(${PCL_INCLUDE_DIRS})
 
 #nodelet
-add_library(  nodelet/globalmap_server_nodelet.cpp)
+add_library(globalmap_server_nodelet nodelet/globalmap_server_nodelet.cpp)
 target_link_libraries(globalmap_server_nodelet 
   ${catkin_LIBRARIES}
   ${PCL_LIBRARIES}
 )
 
-add_library(sentry_localization_nodelet nodelet/sentry_localization_nodelet.cpp)
+add_library(sentry_localization_nodelet 
+  nodelet/sentry_localization_nodelet.cpp
+  src/pose_estimator.cpp)
 target_link_libraries(sentry_localization_nodelet 
   ${catkin_LIBRARIES}
   ${PCL_LIBRARIES}

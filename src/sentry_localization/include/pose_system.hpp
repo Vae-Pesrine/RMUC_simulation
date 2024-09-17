@@ -81,8 +81,7 @@ public :
         observation.middleRows(3, 4) = state.middleRows(6, 4).normalized();
         return observation;
     }
-
-private :
+    
     double dt;
 };
 
