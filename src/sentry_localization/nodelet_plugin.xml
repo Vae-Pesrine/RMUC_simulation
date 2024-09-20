@@ -1,3 +1,7 @@
 <library path="lib/libglobalmap_server_nodelet">
     <class name="sentry_localization/GlobalmapServerNodelet" type="sentry_localization::GlobalmapServerNodelet" base_class_type="nodelet::Nodelet" />
 </library>
+
+<library path="lib/libsentry_localization_nodelet">
+    <class name="sentry_localization/SentryLocalizationNodelet" type="sentry_localization::SentryLocalizationNodelet" base_class_type="nodelet::Nodelet" />
+</library>
