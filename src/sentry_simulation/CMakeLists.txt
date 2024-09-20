@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(sentry_simulation)
+add_compile_options(-std=c++17)
 
 set(CMAKE_BUILD_TYPE Release)
 set(BUILD_STATIC_LIBS ON)
@@ -12,21 +13,32 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   sensor_msgs
   pcl_ros
+  tf
+  message_generation
+  livox_ros_driver2
 )
 
-find_package(OpenCV REQUIRED)
 find_package(PCL REQUIRED)
+find_package(gazebo REQUIRED)
+
+#message
+# add_message_files(FILES
+#  CustomPoint.msg
+#  CustomMsg.msg
+# )
+
+# generate_messages(DEPENDENCIES
+# std_msgs
+# )
 
 ###################################
 ## catkin specific configuration ##
 ###################################
 
 catkin_package(
-  CATKIN_DEPENDS
-  roscpp
-  std_msgs
-  sensor_msgs
-  pcl_ros
+  CATKIN_DEPENDS roscpp std_msgs sensor_msgs tf pcl_ros message_runtime
+  INCLUDE_DIRS include
+  LIBRARIES sentry_simulation
 )
 
 ###########
@@ -37,7 +49,7 @@ catkin_package(
 ## Your package locations should be listed before other locations
 include_directories(
   ${catkin_INCLUDE_DIRS}
-  ${OpenCV_INCLUDE_DIRS}
+  ${GAZEBO_INCLUDE_DIRS}
   ${PCL_INCLUDE_DIRS}
   "${PROJECT_SOURCE_DIR}/include"
   ~/RMUC_simulation/src/sentry_simulation/include
@@ -47,41 +59,14 @@ include_directories(
 
 ## Specify additional locations for library files
 link_directories(
+  ${GAZEBO_LIBRARY_DIRS}
   /usr/local/lib # Location when using 'make system_install'
   /usr/lib       # More usual location (e.g. when installing using a package)
 )
 
-## Declare executables
-add_executable(vehicle_simulator ${PROJECT_SOURCE_DIR}/src/vehicle_simulator.cpp)
 add_executable(key_control ${PROJECT_SOURCE_DIR}/src/key_control.cpp)
-
-
-## Specify libraries to link a library or executable target against
-target_link_libraries(vehicle_simulator ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${PCL_LIBRARIES})
 target_link_libraries(key_control ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${PCL_LIBRARIES})
 
-install(TARGETS vehicle_simulator
-  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
-
-
-install(DIRECTORY launch/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
-)
-install(DIRECTORY log/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/log
-)
-install(DIRECTORY mesh/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/mesh
-)
-install(DIRECTORY rviz/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/rviz
-)
-install(DIRECTORY urdf/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/urdf
-)
-install(DIRECTORY world/
-  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/world
-)
+add_library(sentry_simulation SHARED src/livox_points_plugin.cpp src/livox_ode_multiray_shape.cpp)
+target_link_libraries(sentry_simulation ${catkin_LIBRARIES} ${PCL_LIBRARIES} RayPlugin)
+target_link_libraries(sentry_simulation libprotobuf.so.9)

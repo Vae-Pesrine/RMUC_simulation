@@ -1,8 +1,8 @@
 #include <ros/ros.h>
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
-#include <cstdlib>  // 对于 rand() 和 RAND_MAX
-#include <cmath>    // 对于除法操作
+#include <cstdlib>  //rand() 和 RAND_MAX
+#include <cmath>  
 
 int main(int argc, char *argv[])
 {

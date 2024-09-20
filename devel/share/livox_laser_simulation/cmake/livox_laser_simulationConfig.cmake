@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(livox_laser_simulation_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/jgy/RMUC_simulation/src/laser_simulator/livox_laser_simulation/include " STREQUAL " ")
+if(NOT "/home/jgy/RMUC_simulation/devel/include;/home/jgy/RMUC_simulation/src/laser_simulator/livox_laser_simulation/include " STREQUAL " ")
   set(livox_laser_simulation_INCLUDE_DIRS "")
-  set(_include_dirs "/home/jgy/RMUC_simulation/src/laser_simulator/livox_laser_simulation/include")
+  set(_include_dirs "/home/jgy/RMUC_simulation/devel/include;/home/jgy/RMUC_simulation/src/laser_simulator/livox_laser_simulation/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/jgy/RMUC_simulation/devel/lib;/home/jgy/RMUC_simulation/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/jgy/RMUC_simulation/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -177,7 +177,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(livox_laser_simulation_EXPORTED_TARGETS "")
+set(livox_laser_simulation_EXPORTED_TARGETS "livox_laser_simulation_generate_messages_cpp;livox_laser_simulation_generate_messages_eus;livox_laser_simulation_generate_messages_lisp;livox_laser_simulation_generate_messages_nodejs;livox_laser_simulation_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${livox_laser_simulation_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -185,7 +185,7 @@ foreach(t ${livox_laser_simulation_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "tf;pcl_ros")
+set(depends "tf;message_runtime;std_msgs;pcl_ros")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -214,7 +214,7 @@ foreach(depend ${depends})
   _list_append_deduplicate(livox_laser_simulation_EXPORTED_TARGETS ${${livox_laser_simulation_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "livox_laser_simulation-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${livox_laser_simulation_DIR}/${extra})

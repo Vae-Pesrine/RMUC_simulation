@@ -1264,18 +1264,74 @@ tf2_msgs_generate_messages_py/fast:
 .PHONY : tf2_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-sentry_simulation/CMakeFiles/vehicle_simulator.dir/rule:
-	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentry_simulation/CMakeFiles/vehicle_simulator.dir/rule
-.PHONY : sentry_simulation/CMakeFiles/vehicle_simulator.dir/rule
+sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_cpp.dir/rule:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_cpp.dir/rule
+.PHONY : sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-vehicle_simulator: sentry_simulation/CMakeFiles/vehicle_simulator.dir/rule
-.PHONY : vehicle_simulator
+livox_ros_driver2_generate_messages_cpp: sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_cpp.dir/rule
+.PHONY : livox_ros_driver2_generate_messages_cpp
 
 # fast build rule for target.
-vehicle_simulator/fast:
-	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/vehicle_simulator.dir/build.make sentry_simulation/CMakeFiles/vehicle_simulator.dir/build
-.PHONY : vehicle_simulator/fast
+livox_ros_driver2_generate_messages_cpp/fast:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_cpp.dir/build.make sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_cpp.dir/build
+.PHONY : livox_ros_driver2_generate_messages_cpp/fast
+
+# Convenience name for target.
+sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_eus.dir/rule:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_eus.dir/rule
+.PHONY : sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+livox_ros_driver2_generate_messages_eus: sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_eus.dir/rule
+.PHONY : livox_ros_driver2_generate_messages_eus
+
+# fast build rule for target.
+livox_ros_driver2_generate_messages_eus/fast:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_eus.dir/build.make sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_eus.dir/build
+.PHONY : livox_ros_driver2_generate_messages_eus/fast
+
+# Convenience name for target.
+sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_lisp.dir/rule:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_lisp.dir/rule
+.PHONY : sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+livox_ros_driver2_generate_messages_lisp: sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_lisp.dir/rule
+.PHONY : livox_ros_driver2_generate_messages_lisp
+
+# fast build rule for target.
+livox_ros_driver2_generate_messages_lisp/fast:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_lisp.dir/build.make sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_lisp.dir/build
+.PHONY : livox_ros_driver2_generate_messages_lisp/fast
+
+# Convenience name for target.
+sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_nodejs.dir/rule:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_nodejs.dir/rule
+.PHONY : sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+livox_ros_driver2_generate_messages_nodejs: sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_nodejs.dir/rule
+.PHONY : livox_ros_driver2_generate_messages_nodejs
+
+# fast build rule for target.
+livox_ros_driver2_generate_messages_nodejs/fast:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_nodejs.dir/build.make sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_nodejs.dir/build
+.PHONY : livox_ros_driver2_generate_messages_nodejs/fast
+
+# Convenience name for target.
+sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_py.dir/rule:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_py.dir/rule
+.PHONY : sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_py.dir/rule
+
+# Convenience name for target.
+livox_ros_driver2_generate_messages_py: sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_py.dir/rule
+.PHONY : livox_ros_driver2_generate_messages_py
+
+# fast build rule for target.
+livox_ros_driver2_generate_messages_py/fast:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_py.dir/build.make sentry_simulation/CMakeFiles/livox_ros_driver2_generate_messages_py.dir/build
+.PHONY : livox_ros_driver2_generate_messages_py/fast
 
 # Convenience name for target.
 sentry_simulation/CMakeFiles/key_control.dir/rule:
@@ -1290,6 +1346,20 @@ key_control: sentry_simulation/CMakeFiles/key_control.dir/rule
 key_control/fast:
 	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/key_control.dir/build.make sentry_simulation/CMakeFiles/key_control.dir/build
 .PHONY : key_control/fast
+
+# Convenience name for target.
+sentry_simulation/CMakeFiles/sentry_simulation.dir/rule:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentry_simulation/CMakeFiles/sentry_simulation.dir/rule
+.PHONY : sentry_simulation/CMakeFiles/sentry_simulation.dir/rule
+
+# Convenience name for target.
+sentry_simulation: sentry_simulation/CMakeFiles/sentry_simulation.dir/rule
+.PHONY : sentry_simulation
+
+# fast build rule for target.
+sentry_simulation/fast:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/sentry_simulation.dir/build.make sentry_simulation/CMakeFiles/sentry_simulation.dir/build
+.PHONY : sentry_simulation/fast
 
 src/key_control.o: src/key_control.cpp.o
 .PHONY : src/key_control.o
@@ -1315,29 +1385,53 @@ src/key_control.cpp.s:
 	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/key_control.dir/build.make sentry_simulation/CMakeFiles/key_control.dir/src/key_control.cpp.s
 .PHONY : src/key_control.cpp.s
 
-src/vehicle_simulator.o: src/vehicle_simulator.cpp.o
-.PHONY : src/vehicle_simulator.o
+src/livox_ode_multiray_shape.o: src/livox_ode_multiray_shape.cpp.o
+.PHONY : src/livox_ode_multiray_shape.o
 
 # target to build an object file
-src/vehicle_simulator.cpp.o:
-	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/vehicle_simulator.dir/build.make sentry_simulation/CMakeFiles/vehicle_simulator.dir/src/vehicle_simulator.cpp.o
-.PHONY : src/vehicle_simulator.cpp.o
+src/livox_ode_multiray_shape.cpp.o:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/sentry_simulation.dir/build.make sentry_simulation/CMakeFiles/sentry_simulation.dir/src/livox_ode_multiray_shape.cpp.o
+.PHONY : src/livox_ode_multiray_shape.cpp.o
 
-src/vehicle_simulator.i: src/vehicle_simulator.cpp.i
-.PHONY : src/vehicle_simulator.i
+src/livox_ode_multiray_shape.i: src/livox_ode_multiray_shape.cpp.i
+.PHONY : src/livox_ode_multiray_shape.i
 
 # target to preprocess a source file
-src/vehicle_simulator.cpp.i:
-	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/vehicle_simulator.dir/build.make sentry_simulation/CMakeFiles/vehicle_simulator.dir/src/vehicle_simulator.cpp.i
-.PHONY : src/vehicle_simulator.cpp.i
+src/livox_ode_multiray_shape.cpp.i:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/sentry_simulation.dir/build.make sentry_simulation/CMakeFiles/sentry_simulation.dir/src/livox_ode_multiray_shape.cpp.i
+.PHONY : src/livox_ode_multiray_shape.cpp.i
 
-src/vehicle_simulator.s: src/vehicle_simulator.cpp.s
-.PHONY : src/vehicle_simulator.s
+src/livox_ode_multiray_shape.s: src/livox_ode_multiray_shape.cpp.s
+.PHONY : src/livox_ode_multiray_shape.s
 
 # target to generate assembly for a file
-src/vehicle_simulator.cpp.s:
-	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/vehicle_simulator.dir/build.make sentry_simulation/CMakeFiles/vehicle_simulator.dir/src/vehicle_simulator.cpp.s
-.PHONY : src/vehicle_simulator.cpp.s
+src/livox_ode_multiray_shape.cpp.s:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/sentry_simulation.dir/build.make sentry_simulation/CMakeFiles/sentry_simulation.dir/src/livox_ode_multiray_shape.cpp.s
+.PHONY : src/livox_ode_multiray_shape.cpp.s
+
+src/livox_points_plugin.o: src/livox_points_plugin.cpp.o
+.PHONY : src/livox_points_plugin.o
+
+# target to build an object file
+src/livox_points_plugin.cpp.o:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/sentry_simulation.dir/build.make sentry_simulation/CMakeFiles/sentry_simulation.dir/src/livox_points_plugin.cpp.o
+.PHONY : src/livox_points_plugin.cpp.o
+
+src/livox_points_plugin.i: src/livox_points_plugin.cpp.i
+.PHONY : src/livox_points_plugin.i
+
+# target to preprocess a source file
+src/livox_points_plugin.cpp.i:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/sentry_simulation.dir/build.make sentry_simulation/CMakeFiles/sentry_simulation.dir/src/livox_points_plugin.cpp.i
+.PHONY : src/livox_points_plugin.cpp.i
+
+src/livox_points_plugin.s: src/livox_points_plugin.cpp.s
+.PHONY : src/livox_points_plugin.s
+
+# target to generate assembly for a file
+src/livox_points_plugin.cpp.s:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_simulation/CMakeFiles/sentry_simulation.dir/build.make sentry_simulation/CMakeFiles/sentry_simulation.dir/src/livox_points_plugin.cpp.s
+.PHONY : src/livox_points_plugin.cpp.s
 
 # Help Target
 help:
@@ -1378,6 +1472,11 @@ help:
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... livox_ros_driver2_generate_messages_cpp"
+	@echo "... livox_ros_driver2_generate_messages_eus"
+	@echo "... livox_ros_driver2_generate_messages_lisp"
+	@echo "... livox_ros_driver2_generate_messages_nodejs"
+	@echo "... livox_ros_driver2_generate_messages_py"
 	@echo "... nodelet_generate_messages_cpp"
 	@echo "... nodelet_generate_messages_eus"
 	@echo "... nodelet_generate_messages_lisp"
@@ -1431,13 +1530,16 @@ help:
 	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_py"
 	@echo "... key_control"
-	@echo "... vehicle_simulator"
+	@echo "... sentry_simulation"
 	@echo "... src/key_control.o"
 	@echo "... src/key_control.i"
 	@echo "... src/key_control.s"
-	@echo "... src/vehicle_simulator.o"
-	@echo "... src/vehicle_simulator.i"
-	@echo "... src/vehicle_simulator.s"
+	@echo "... src/livox_ode_multiray_shape.o"
+	@echo "... src/livox_ode_multiray_shape.i"
+	@echo "... src/livox_ode_multiray_shape.s"
+	@echo "... src/livox_points_plugin.o"
+	@echo "... src/livox_points_plugin.i"
+	@echo "... src/livox_points_plugin.s"
 .PHONY : help
 
 

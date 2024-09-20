@@ -3,6 +3,6 @@ prefix=/home/jgy/RMUC_simulation/devel
 Name: livox_laser_simulation
 Description: Description of livox_laser_simulation
 Version: 0.0.0
-Cflags: -I/home/jgy/RMUC_simulation/src/laser_simulator/livox_laser_simulation/include
+Cflags: -I/home/jgy/RMUC_simulation/devel/include -I/home/jgy/RMUC_simulation/src/laser_simulator/livox_laser_simulation/include
 Libs: -L${prefix}/lib -llivox_laser_simulation
-Requires: tf pcl_ros
+Requires: tf message_runtime std_msgs pcl_ros
