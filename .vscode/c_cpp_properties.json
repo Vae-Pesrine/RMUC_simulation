@@ -46,13 +46,14 @@
                 "${workspaceFolder}/src/laser_simulator/livox_laser_simulation/include",
                 "${workspaceFolder}/src/hdl_ws/src/hdl_localization/include",
                 "${workspaceFolder}/src/sentry_localization/include",
-                "${workspaceFolder}/src/ndt_omp/include"
+                "${workspaceFolder}/src/ndt_omp/include",
+                "/usr/include/eigen3"
             ],
             "name": "ROS",
             "intelliSenseMode": "gcc-x64",
             "compilerPath": "/usr/bin/gcc",
-            "cStandard": "gnu11",
-            "cppStandard": "c++14"
+            "cStandard": "c17",
+            "cppStandard": "c++17"
         }
     ],
     "version": 4
