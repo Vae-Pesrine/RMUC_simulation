@@ -1,0 +1,8 @@
+prefix=/home/jgy/RMUC_simulation/devel
+
+Name: sentry_navigation
+Description: Description of sentry_navigation
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

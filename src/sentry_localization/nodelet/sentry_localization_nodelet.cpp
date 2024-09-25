@@ -52,6 +52,9 @@ public :
         mt_nh = getMTNodeHandle();
         pr_nh = getPrivateNodeHandle();
 
+
+        
+
         InitParams();
         sub_imu = mt_nh.subscribe("/imu", 256, &SentryLocalizationNodelet::imuCb, this); 
         sub_points = mt_nh.subscribe("/livox_horizon_points", 5, &SentryLocalizationNodelet::pointsCb, this);
