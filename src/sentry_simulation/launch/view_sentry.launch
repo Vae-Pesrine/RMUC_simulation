@@ -36,7 +36,7 @@
     <node pkg="robot_state_publisher" type="robot_state_publisher" name="sentry_tf_publisher" output="screen" />
 
     <node pkg="sentry_simulation" type="key_control" name="key_control" output="screen">
-        <param name="linear_speed" value="1.2" />
+        <param name="linear_speed" value="6" />
         <param name="angular_speed" value="3.2" />
     </node>
 

@@ -47,13 +47,14 @@
                 "${workspaceFolder}/src/hdl_ws/src/hdl_localization/include",
                 "${workspaceFolder}/src/sentry_localization/include",
                 "${workspaceFolder}/src/ndt_omp/include",
-                "/usr/include/eigen3"
+                "/usr/include/eigen3",
+                "${workspaceFolder}/src/sentry_localization/include/localization"
             ],
             "name": "ROS",
             "intelliSenseMode": "gcc-x64",
             "compilerPath": "/usr/bin/gcc",
-            "cStandard": "c17",
-            "cppStandard": "c++17"
+            "cStandard": "gnu11",
+            "cppStandard": "c++14"
         }
     ],
     "version": 4
