@@ -45,10 +45,11 @@
                 "/usr/include/pcl-1.10",
                 "${workspaceFolder}/src/laser_simulator/livox_laser_simulation/include",
                 "${workspaceFolder}/src/hdl_ws/src/hdl_localization/include",
-                "${workspaceFolder}/src/sentry_localization/include",
                 "${workspaceFolder}/src/ndt_omp/include",
                 "/usr/include/eigen3",
-                "${workspaceFolder}/src/sentry_localization/include/localization"
+                "${workspaceFolder}/src/sentry_localization/include/include/localization",
+                "${workspaceFolder}/src/sentry_localization/include/include/global_localization",
+                "${workspaceFolder}/src/sentry_localization/include"
             ],
             "name": "ROS",
             "intelliSenseMode": "gcc-x64",
