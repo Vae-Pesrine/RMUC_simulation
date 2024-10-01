@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/msg/ScanMatchingStatus.js"
   "/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/QueryGlobalLocalization.js"
+  "/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/SetGlobalLocalizationEngine.js"
   "/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/SetGlobalMap.js"
   "CMakeFiles/sentry_userdefinition_generate_messages_nodejs"
 )

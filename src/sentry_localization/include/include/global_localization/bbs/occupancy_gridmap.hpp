@@ -27,7 +27,7 @@ public:
         this->values = values;
     }
 
-    double gridResolution() const{
+    double grid_resolution() const{
         return resolution;
     }
     int width() const{
@@ -43,7 +43,7 @@ public:
 
 public:
     //将点云数据插入地图
-    void insertPoints(const std::vector<Eigen::Vector2f, Eigen::aligned_allocator<Eigen::Vector2f>>& points, int min_points_per_grid)
+    void insert_points(const std::vector<Eigen::Vector2f, Eigen::aligned_allocator<Eigen::Vector2f>>& points, int min_points_per_grid)
     {
         for(const auto& pt : points){
             auto loc = grid_loc(pt);
@@ -55,7 +55,7 @@ public:
         values /= min_points_per_grid;
     }
 
-    double score(const std::vector<Eigen::Vector2f, Eigen::aligned_allocator<Eigen::Vector2f>>& points) const{
+    double calc_score(const std::vector<Eigen::Vector2f, Eigen::aligned_allocator<Eigen::Vector2f>>& points) const{
         double sum = 0.0;
         for(const auto& pt : points){
             auto loc = grid_loc(pt);
@@ -81,17 +81,18 @@ public:
         return std::make_shared<OccupancyGridMap>(resolution * 2.0, small_map);
     }
 
-    nav_msgs::OccupancyGridConstPtr toRosMsg() const{
+    nav_msgs::OccupancyGridConstPtr to_rosmsg() const{
         nav_msgs::OccupancyGridPtr msg(new nav_msgs::OccupancyGrid);
         msg->header.frame_id = "map";
         msg->header.stamp = ros::Time(0);
         msg->data.resize(values.cols * values.rows);
 
-        std::transform(values.begin(), values.end(), msg->data.begin(), [=](auto x)){
+        std::transform(values.begin(), values.end(), msg->data.begin(), [=](auto x){
             double x_ = x * 100.0;
             return std::max(0.0, std::min(100.0, x_));
-        }
-        msg->info.map_load_time = ros::Time:now();
+        });
+
+        msg->info.map_load_time = ros::Time::now();
         msg->info.width = values.cols;
         msg->info.height = values.rows;
         msg->info.resolution = resolution;
@@ -117,7 +118,7 @@ private:
     }
 
     //将点转化为地图中的栅格位置
-    Eigen::Vector2f grid_loc(const Eigen::Vector2f& pt) const{
+    Eigen::Vector2i grid_loc(const Eigen::Vector2f& pt) const{
         Eigen::Vector2i loc = (pt / resolution).array().floor().cast<int>();
         Eigen::Vector2i offset = Eigen::Vector2i(values.cols / 2, values.rows / 2);
         return loc + offset;

@@ -1393,6 +1393,32 @@ sentry_localization_nodelet/fast:
 	$(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/sentry_localization_nodelet.dir/build.make sentry_localization/CMakeFiles/sentry_localization_nodelet.dir/build
 .PHONY : sentry_localization_nodelet/fast
 
+#=============================================================================
+# Target rules for targets named global_localization
+
+# Build rule for target.
+global_localization: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 global_localization
+.PHONY : global_localization
+
+# fast build rule for target.
+global_localization/fast:
+	$(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization.dir/build.make sentry_localization/CMakeFiles/global_localization.dir/build
+.PHONY : global_localization/fast
+
+#=============================================================================
+# Target rules for targets named global_localization_node
+
+# Build rule for target.
+global_localization_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 global_localization_node
+.PHONY : global_localization_node
+
+# fast build rule for target.
+global_localization_node/fast:
+	$(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization_node.dir/build.make sentry_localization/CMakeFiles/global_localization_node.dir/build
+.PHONY : global_localization_node/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1494,6 +1520,8 @@ help:
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_py"
+	@echo "... global_localization"
+	@echo "... global_localization_node"
 	@echo "... globalmap_server_nodelet"
 	@echo "... gmock"
 	@echo "... gmock_main"

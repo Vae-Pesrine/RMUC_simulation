@@ -4,10 +4,16 @@
 
     <!-- globalmap server nodelet -->
     <node pkg="nodelet" type="nodelet" name="globalmap_server_nodelet" args="load sentry_localization/GlobalmapServerNodelet $(nodelet_manager)">
-        <param name="globalmap_pcdfile" value="$(find sentry_localization)/map/RMUC.pcd" />
-        <param name="voxelGridFilterSize" value="0.05" />
+        <rosparam file="$(find sentry_localization)/config/globalmap_params.yaml" command="load" />
     </node>
 
-    <node pkg="" />
+    <node pkg="sentry_localization" type="nodelet" name="sentry_localization_nodelet" args="load sentry-localization/SentryLocalizationNodelet $(nodelet_manager)">
+        <rosparam file="$(fine sentry_localization)/config/sentry_localization_params.yaml" command="load" />
     </node>
+
+    <node pkg="sentry_localization" type="global_localization" name="global_localization" output="screen">
+        <rosparam file="$(find sentry_localization)/config/bbs_params.yaml" command="load" />
+        <rosparam file="$(find sentry_localization)/config/engine_params.yaml" command="load" />
+    </node>
+
 </launch>

@@ -1361,6 +1361,154 @@ sentry_localization_nodelet/fast:
 	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/sentry_localization_nodelet.dir/build.make sentry_localization/CMakeFiles/sentry_localization_nodelet.dir/build
 .PHONY : sentry_localization_nodelet/fast
 
+# Convenience name for target.
+sentry_localization/CMakeFiles/global_localization.dir/rule:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentry_localization/CMakeFiles/global_localization.dir/rule
+.PHONY : sentry_localization/CMakeFiles/global_localization.dir/rule
+
+# Convenience name for target.
+global_localization: sentry_localization/CMakeFiles/global_localization.dir/rule
+.PHONY : global_localization
+
+# fast build rule for target.
+global_localization/fast:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization.dir/build.make sentry_localization/CMakeFiles/global_localization.dir/build
+.PHONY : global_localization/fast
+
+# Convenience name for target.
+sentry_localization/CMakeFiles/global_localization_node.dir/rule:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentry_localization/CMakeFiles/global_localization_node.dir/rule
+.PHONY : sentry_localization/CMakeFiles/global_localization_node.dir/rule
+
+# Convenience name for target.
+global_localization_node: sentry_localization/CMakeFiles/global_localization_node.dir/rule
+.PHONY : global_localization_node
+
+# fast build rule for target.
+global_localization_node/fast:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization_node.dir/build.make sentry_localization/CMakeFiles/global_localization_node.dir/build
+.PHONY : global_localization_node/fast
+
+apps/bbs_localization.o: apps/bbs_localization.cpp.o
+.PHONY : apps/bbs_localization.o
+
+# target to build an object file
+apps/bbs_localization.cpp.o:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization.dir/build.make sentry_localization/CMakeFiles/global_localization.dir/apps/bbs_localization.cpp.o
+.PHONY : apps/bbs_localization.cpp.o
+
+apps/bbs_localization.i: apps/bbs_localization.cpp.i
+.PHONY : apps/bbs_localization.i
+
+# target to preprocess a source file
+apps/bbs_localization.cpp.i:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization.dir/build.make sentry_localization/CMakeFiles/global_localization.dir/apps/bbs_localization.cpp.i
+.PHONY : apps/bbs_localization.cpp.i
+
+apps/bbs_localization.s: apps/bbs_localization.cpp.s
+.PHONY : apps/bbs_localization.s
+
+# target to generate assembly for a file
+apps/bbs_localization.cpp.s:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization.dir/build.make sentry_localization/CMakeFiles/global_localization.dir/apps/bbs_localization.cpp.s
+.PHONY : apps/bbs_localization.cpp.s
+
+apps/global_localization_bbs.o: apps/global_localization_bbs.cpp.o
+.PHONY : apps/global_localization_bbs.o
+
+# target to build an object file
+apps/global_localization_bbs.cpp.o:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization.dir/build.make sentry_localization/CMakeFiles/global_localization.dir/apps/global_localization_bbs.cpp.o
+.PHONY : apps/global_localization_bbs.cpp.o
+
+apps/global_localization_bbs.i: apps/global_localization_bbs.cpp.i
+.PHONY : apps/global_localization_bbs.i
+
+# target to preprocess a source file
+apps/global_localization_bbs.cpp.i:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization.dir/build.make sentry_localization/CMakeFiles/global_localization.dir/apps/global_localization_bbs.cpp.i
+.PHONY : apps/global_localization_bbs.cpp.i
+
+apps/global_localization_bbs.s: apps/global_localization_bbs.cpp.s
+.PHONY : apps/global_localization_bbs.s
+
+# target to generate assembly for a file
+apps/global_localization_bbs.cpp.s:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization.dir/build.make sentry_localization/CMakeFiles/global_localization.dir/apps/global_localization_bbs.cpp.s
+.PHONY : apps/global_localization_bbs.cpp.s
+
+apps/global_localization_fpfh_ransac.o: apps/global_localization_fpfh_ransac.cpp.o
+.PHONY : apps/global_localization_fpfh_ransac.o
+
+# target to build an object file
+apps/global_localization_fpfh_ransac.cpp.o:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization.dir/build.make sentry_localization/CMakeFiles/global_localization.dir/apps/global_localization_fpfh_ransac.cpp.o
+.PHONY : apps/global_localization_fpfh_ransac.cpp.o
+
+apps/global_localization_fpfh_ransac.i: apps/global_localization_fpfh_ransac.cpp.i
+.PHONY : apps/global_localization_fpfh_ransac.i
+
+# target to preprocess a source file
+apps/global_localization_fpfh_ransac.cpp.i:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization.dir/build.make sentry_localization/CMakeFiles/global_localization.dir/apps/global_localization_fpfh_ransac.cpp.i
+.PHONY : apps/global_localization_fpfh_ransac.cpp.i
+
+apps/global_localization_fpfh_ransac.s: apps/global_localization_fpfh_ransac.cpp.s
+.PHONY : apps/global_localization_fpfh_ransac.s
+
+# target to generate assembly for a file
+apps/global_localization_fpfh_ransac.cpp.s:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization.dir/build.make sentry_localization/CMakeFiles/global_localization.dir/apps/global_localization_fpfh_ransac.cpp.s
+.PHONY : apps/global_localization_fpfh_ransac.cpp.s
+
+apps/ransac_pose_estimation.o: apps/ransac_pose_estimation.cpp.o
+.PHONY : apps/ransac_pose_estimation.o
+
+# target to build an object file
+apps/ransac_pose_estimation.cpp.o:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization.dir/build.make sentry_localization/CMakeFiles/global_localization.dir/apps/ransac_pose_estimation.cpp.o
+.PHONY : apps/ransac_pose_estimation.cpp.o
+
+apps/ransac_pose_estimation.i: apps/ransac_pose_estimation.cpp.i
+.PHONY : apps/ransac_pose_estimation.i
+
+# target to preprocess a source file
+apps/ransac_pose_estimation.cpp.i:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization.dir/build.make sentry_localization/CMakeFiles/global_localization.dir/apps/ransac_pose_estimation.cpp.i
+.PHONY : apps/ransac_pose_estimation.cpp.i
+
+apps/ransac_pose_estimation.s: apps/ransac_pose_estimation.cpp.s
+.PHONY : apps/ransac_pose_estimation.s
+
+# target to generate assembly for a file
+apps/ransac_pose_estimation.cpp.s:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization.dir/build.make sentry_localization/CMakeFiles/global_localization.dir/apps/ransac_pose_estimation.cpp.s
+.PHONY : apps/ransac_pose_estimation.cpp.s
+
+apps/voxelset.o: apps/voxelset.cpp.o
+.PHONY : apps/voxelset.o
+
+# target to build an object file
+apps/voxelset.cpp.o:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization.dir/build.make sentry_localization/CMakeFiles/global_localization.dir/apps/voxelset.cpp.o
+.PHONY : apps/voxelset.cpp.o
+
+apps/voxelset.i: apps/voxelset.cpp.i
+.PHONY : apps/voxelset.i
+
+# target to preprocess a source file
+apps/voxelset.cpp.i:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization.dir/build.make sentry_localization/CMakeFiles/global_localization.dir/apps/voxelset.cpp.i
+.PHONY : apps/voxelset.cpp.i
+
+apps/voxelset.s: apps/voxelset.cpp.s
+.PHONY : apps/voxelset.s
+
+# target to generate assembly for a file
+apps/voxelset.cpp.s:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization.dir/build.make sentry_localization/CMakeFiles/global_localization.dir/apps/voxelset.cpp.s
+.PHONY : apps/voxelset.cpp.s
+
 nodelet/globalmap_server_nodelet.o: nodelet/globalmap_server_nodelet.cpp.o
 .PHONY : nodelet/globalmap_server_nodelet.o
 
@@ -1408,6 +1556,30 @@ nodelet/sentry_localization_nodelet.s: nodelet/sentry_localization_nodelet.cpp.s
 nodelet/sentry_localization_nodelet.cpp.s:
 	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/sentry_localization_nodelet.dir/build.make sentry_localization/CMakeFiles/sentry_localization_nodelet.dir/nodelet/sentry_localization_nodelet.cpp.s
 .PHONY : nodelet/sentry_localization_nodelet.cpp.s
+
+src/global_localization.o: src/global_localization.cpp.o
+.PHONY : src/global_localization.o
+
+# target to build an object file
+src/global_localization.cpp.o:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization_node.dir/build.make sentry_localization/CMakeFiles/global_localization_node.dir/src/global_localization.cpp.o
+.PHONY : src/global_localization.cpp.o
+
+src/global_localization.i: src/global_localization.cpp.i
+.PHONY : src/global_localization.i
+
+# target to preprocess a source file
+src/global_localization.cpp.i:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization_node.dir/build.make sentry_localization/CMakeFiles/global_localization_node.dir/src/global_localization.cpp.i
+.PHONY : src/global_localization.cpp.i
+
+src/global_localization.s: src/global_localization.cpp.s
+.PHONY : src/global_localization.s
+
+# target to generate assembly for a file
+src/global_localization.cpp.s:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization_node.dir/build.make sentry_localization/CMakeFiles/global_localization_node.dir/src/global_localization.cpp.s
+.PHONY : src/global_localization.cpp.s
 
 src/pose_estimator.o: src/pose_estimator.cpp.o
 .PHONY : src/pose_estimator.o
@@ -1529,14 +1701,34 @@ help:
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_py"
+	@echo "... global_localization"
+	@echo "... global_localization_node"
 	@echo "... globalmap_server_nodelet"
 	@echo "... sentry_localization_nodelet"
+	@echo "... apps/bbs_localization.o"
+	@echo "... apps/bbs_localization.i"
+	@echo "... apps/bbs_localization.s"
+	@echo "... apps/global_localization_bbs.o"
+	@echo "... apps/global_localization_bbs.i"
+	@echo "... apps/global_localization_bbs.s"
+	@echo "... apps/global_localization_fpfh_ransac.o"
+	@echo "... apps/global_localization_fpfh_ransac.i"
+	@echo "... apps/global_localization_fpfh_ransac.s"
+	@echo "... apps/ransac_pose_estimation.o"
+	@echo "... apps/ransac_pose_estimation.i"
+	@echo "... apps/ransac_pose_estimation.s"
+	@echo "... apps/voxelset.o"
+	@echo "... apps/voxelset.i"
+	@echo "... apps/voxelset.s"
 	@echo "... nodelet/globalmap_server_nodelet.o"
 	@echo "... nodelet/globalmap_server_nodelet.i"
 	@echo "... nodelet/globalmap_server_nodelet.s"
 	@echo "... nodelet/sentry_localization_nodelet.o"
 	@echo "... nodelet/sentry_localization_nodelet.i"
 	@echo "... nodelet/sentry_localization_nodelet.s"
+	@echo "... src/global_localization.o"
+	@echo "... src/global_localization.i"
+	@echo "... src/global_localization.s"
 	@echo "... src/pose_estimator.o"
 	@echo "... src/pose_estimator.i"
 	@echo "... src/pose_estimator.s"

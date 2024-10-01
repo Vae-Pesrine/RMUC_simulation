@@ -9,6 +9,8 @@
   :components ((:file "_package")
     (:file "QueryGlobalLocalization" :depends-on ("_package_QueryGlobalLocalization"))
     (:file "_package_QueryGlobalLocalization" :depends-on ("_package"))
+    (:file "SetGlobalLocalizationEngine" :depends-on ("_package_SetGlobalLocalizationEngine"))
+    (:file "_package_SetGlobalLocalizationEngine" :depends-on ("_package"))
     (:file "SetGlobalMap" :depends-on ("_package_SetGlobalMap"))
     (:file "_package_SetGlobalMap" :depends-on ("_package"))
   ))

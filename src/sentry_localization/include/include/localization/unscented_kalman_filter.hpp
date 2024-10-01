@@ -10,8 +10,8 @@ namespace sentry_localization{
 template<typename T, class System>
 class UnscentedKalmanFilterX
 {
-  typedef Eigen::Matrix<T, Eigen::Dynamic, 1> VectorXt;
-  typedef Eigen::Matrix<T, Eigen::Dynamic, Eigen::Dynamic> MatrixXt;
+  using VectorXt = Eigen::Matrix<T, Eigen::Dynamic, 1>;
+  using MatrixXt = Eigen::Matrix<T, Eigen::Dynamic, Eigen::Dynamic>;
 public :
   UnscentedKalmanFilterX(const System system, int state_dim, int input_dim, int measurement_dim, const MatrixXt& process_noise, const MatrixXt& measurement_noise, const VectorXt& mean, const MatrixXt& cov)
     : state_dim(state_dim),                                        

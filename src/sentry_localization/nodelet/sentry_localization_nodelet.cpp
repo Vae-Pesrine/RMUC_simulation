@@ -1,6 +1,7 @@
 #include <mutex>
 #include <memory>
 #include <cmath>
+#include <string>
 #include <iostream>
 
 #include <ros/ros.h>
@@ -30,6 +31,7 @@
 #include <tf2_geometry_msgs/tf2_geometry_msgs.h>
 #include <eigen_conversions/eigen_msg.h>
 
+#include <include/std_cout.h>
 #include <include/localization/pose_estimator.hpp>
 #include <include/localization/delta_estimator.hpp>
 
@@ -51,13 +53,10 @@ public :
         nh = getNodeHandle();
         mt_nh = getMTNodeHandle();
         pr_nh = getPrivateNodeHandle();
-
-
-
-
+        
         InitParams();
-        sub_imu = mt_nh.subscribe("/imu", 256, &SentryLocalizationNodelet::imuCb, this); 
-        sub_points = mt_nh.subscribe("/livox_horizon_points", 5, &SentryLocalizationNodelet::pointsCb, this);
+        sub_imu = mt_nh.subscribe(pr_nh.param<std::string>("topic_imu", topic_imu), 256, &SentryLocalizationNodelet::imuCb, this); 
+        sub_points = mt_nh.subscribe(pr_nh.param<std::string>("topic_lidar", topic_laser), 5, &SentryLocalizationNodelet::pointsCb, this);
         sub_globalmap = mt_nh.subscribe("/globalmap", 1, &SentryLocalizationNodelet::globalmapCb, this);
         sub_initialpose = mt_nh.subscribe("/initialpose", 1, &SentryLocalizationNodelet::initialposeCb, this);
 
@@ -404,6 +403,9 @@ private :
     ros::Publisher pub_alignedcloud;     //配准后的点云
     ros::Publisher pub_status;           //扫描配准状态
 
+    std::string topic_lidar;
+    std::string topic_imu;
+
     tf2_ros::Buffer tf_buffer;
     tf2_ros::TransformListener tf_listener;
     tf2_ros::TransformBroadcaster tf_broadcaster;
@@ -442,15 +444,6 @@ private :
     ros::ServiceClient set_globalmap_service;
     ros::ServiceClient query_globallocalization_service;
 
-    //std::cout 转义序列前缀
-    const std::string RESET = "\033[0m";
-    const std::string BLACK = "\033[30m";
-    const std::string RED = "\033[31m";
-    const std::string GREEN = "\033[32m";
-    const std::string YELLOW = "\033[33m";
-    const std::string BLUE = "\033[34m";
-    const std::string PURPLE_RED = "\033[35m";
-    const std::string WHITE = "\033[37m";    
 };
 
 }

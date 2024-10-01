@@ -67,7 +67,7 @@ include sentry_userdefinition/CMakeFiles/_sentry_userdefinition_generate_message
 include sentry_userdefinition/CMakeFiles/_sentry_userdefinition_generate_messages_check_deps_SetGlobalMap.dir/progress.make
 
 sentry_userdefinition/CMakeFiles/_sentry_userdefinition_generate_messages_check_deps_SetGlobalMap:
-	cd /home/jgy/RMUC_simulation/build/sentry_userdefinition && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py sentry_userdefinition /home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalMap.srv std_msgs/Header:sensor_msgs/PointField:sensor_msgs/PointCloud2
+	cd /home/jgy/RMUC_simulation/build/sentry_userdefinition && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py sentry_userdefinition /home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalMap.srv sensor_msgs/PointField:std_msgs/Header:sensor_msgs/PointCloud2
 
 _sentry_userdefinition_generate_messages_check_deps_SetGlobalMap: sentry_userdefinition/CMakeFiles/_sentry_userdefinition_generate_messages_check_deps_SetGlobalMap
 _sentry_userdefinition_generate_messages_check_deps_SetGlobalMap: sentry_userdefinition/CMakeFiles/_sentry_userdefinition_generate_messages_check_deps_SetGlobalMap.dir/build.make

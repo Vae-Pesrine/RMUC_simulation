@@ -2091,7 +2091,8 @@ sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/nodelet/globalmap_se
   /opt/ros/noetic/include/class_loader/exceptions.hpp \
   /opt/ros/noetic/include/class_loader/meta_object.hpp \
   /opt/ros/noetic/include/class_loader/visibility_control.hpp \
-  /opt/ros/noetic/include/class_loader/register_macro.hpp
+  /opt/ros/noetic/include/class_loader/register_macro.hpp \
+  /home/jgy/RMUC_simulation/src/sentry_localization/include/include/std_cout.h
 
 
 /opt/ros/noetic/include/class_loader/exceptions.hpp:
@@ -2661,6 +2662,8 @@ sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/nodelet/globalmap_se
 /usr/include/boost/preprocessor/iteration/detail/local.hpp:
 
 /usr/include/boost/preprocessor/iteration/local.hpp:
+
+/home/jgy/RMUC_simulation/src/sentry_localization/include/include/std_cout.h:
 
 /usr/include/boost/iostreams/detail/config/enable_warnings.hpp:
 

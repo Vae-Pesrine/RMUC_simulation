@@ -29,12 +29,13 @@ public:
 
     Points transform(const Points& points, double trans_resolution, double theta_resolution);
 
-    double score(const Points& points, double theta_resolution, const std::vector<std::shared_ptr<OccupancyGridMap>>& gridmap_pyramid)
+    double calc_score(const Points& points, double theta_resolution, const std::vector<std::shared_ptr<OccupancyGridMap>>& gridmap_pyramid);
 
     std::vector<DiscreteTransformation> branch();
 
 public:
     double score;
+    double level;
     int x;
     int y;
     int theta;

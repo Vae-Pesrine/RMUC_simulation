@@ -6,15 +6,15 @@
 #include <std_msgs/String.h>
 #include <sensor_msgs/PointCloud2.h>
 
-//pcl
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
 #include <pcl_conversions/pcl_conversions.h>
 #include <pcl/filters/voxel_grid.h>
 
-//API
 #include <nodelet/nodelet.h>
 #include <pluginlib/class_list_macros.h>
+
+#include <include/std_cout.h>
 
 namespace sentry_localization
 {
@@ -30,26 +30,26 @@ private:
     ros::WallTimer pub_globalmap_timer;
 
     std::string globalmap_pcdfile;
-    double voxelGridFilterSize;
+    double downsample_resolution;
     sensor_msgs::PointCloud2 globalmap_roscloud;
 
     pcl::PointCloud<pcl::PointXYZ>::Ptr globalmap_cloud;
 
     void InitParams()
     {
-        pr_nh.getParam("voxelGridFilterSize", voxelGridFilterSize);
+        pr_nh.getParam("downsample_resolution", downsample_resolution);
         pr_nh.getParam("globalmap_pcdfile", globalmap_pcdfile);
 
         //reading pcd file
         globalmap_cloud.reset(new pcl::PointCloud<pcl::PointXYZ>());
-        std::cout << "\033[1;32mReading pcd file " << globalmap_pcdfile << "\033[0m" << std::endl;
+        std::cout << BLUE << "\033[1;32mReading pcd file " << globalmap_pcdfile << RESET << std::endl;
         if(pcl::io::loadPCDFile(globalmap_pcdfile, *globalmap_cloud) == -1)
             PCL_ERROR("Could not read file RMUC.pcd");
 
         //voxel grid filter
         pcl::PointCloud<pcl::PointXYZ>::Ptr filtered_cloud(new pcl::PointCloud<pcl::PointXYZ>());
         boost::shared_ptr<pcl::VoxelGrid<pcl::PointXYZ>> voxelGridFilter(new pcl::VoxelGrid<pcl::PointXYZ>());
-        voxelGridFilter->setLeafSize(voxelGridFilterSize, voxelGridFilterSize, voxelGridFilterSize);
+        voxelGridFilter->setLeafSize(downsample_resolution, downsample_resolution, downsample_resolution);
         voxelGridFilter->setInputCloud(globalmap_cloud);
         voxelGridFilter->filter(*filtered_cloud);
         pcl::toROSMsg(*filtered_cloud, globalmap_roscloud);
@@ -65,7 +65,7 @@ private:
 
     void globalmap_updateCb(const std_msgs::String::ConstPtr msg)
     {
-        std::cout << "\033[1;32mReceived map request and the map path is " << msg->data << "\033[0m" << std::endl;
+        std::cout << GREEN << "Received map request and the map path is " << msg->data << RESET << std::endl;
         globalmap_cloud.reset(new pcl::PointCloud<pcl::PointXYZ>());
         if(pcl::io::loadPCDFile(msg->data, *globalmap_cloud) == -1)
             PCL_ERROR("Could not read pcd file");
@@ -73,7 +73,7 @@ private:
         //voxel grid filter
         pcl::PointCloud<pcl::PointXYZ>::Ptr filtered_cloud(new pcl::PointCloud<pcl::PointXYZ>());
         boost::shared_ptr<pcl::VoxelGrid<pcl::PointXYZ>> voxelGridFilter(new pcl::VoxelGrid<pcl::PointXYZ>());
-        voxelGridFilter->setLeafSize(voxelGridFilterSize, voxelGridFilterSize, voxelGridFilterSize);
+        voxelGridFilter->setLeafSize(downsample_resolution, downsample_resolution, downsample_resolution);
         voxelGridFilter->setInputCloud(globalmap_cloud);
         voxelGridFilter->filter(*filtered_cloud);
         pcl::toROSMsg(*filtered_cloud, globalmap_roscloud);

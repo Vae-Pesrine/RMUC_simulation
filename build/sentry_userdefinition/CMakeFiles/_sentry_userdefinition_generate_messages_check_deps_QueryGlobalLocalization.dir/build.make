@@ -67,7 +67,7 @@ include sentry_userdefinition/CMakeFiles/_sentry_userdefinition_generate_message
 include sentry_userdefinition/CMakeFiles/_sentry_userdefinition_generate_messages_check_deps_QueryGlobalLocalization.dir/progress.make
 
 sentry_userdefinition/CMakeFiles/_sentry_userdefinition_generate_messages_check_deps_QueryGlobalLocalization:
-	cd /home/jgy/RMUC_simulation/build/sentry_userdefinition && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py sentry_userdefinition /home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/QueryGlobalLocalization.srv sensor_msgs/PointField:geometry_msgs/Point:sensor_msgs/PointCloud2:geometry_msgs/Pose:geometry_msgs/Quaternion:std_msgs/Header
+	cd /home/jgy/RMUC_simulation/build/sentry_userdefinition && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py sentry_userdefinition /home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/QueryGlobalLocalization.srv std_msgs/Header:geometry_msgs/Pose:geometry_msgs/Quaternion:sensor_msgs/PointCloud2:sensor_msgs/PointField:geometry_msgs/Point
 
 _sentry_userdefinition_generate_messages_check_deps_QueryGlobalLocalization: sentry_userdefinition/CMakeFiles/_sentry_userdefinition_generate_messages_check_deps_QueryGlobalLocalization
 _sentry_userdefinition_generate_messages_check_deps_QueryGlobalLocalization: sentry_userdefinition/CMakeFiles/_sentry_userdefinition_generate_messages_check_deps_QueryGlobalLocalization.dir/build.make

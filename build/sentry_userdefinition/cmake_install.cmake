@@ -50,6 +50,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/sentry_userdefinition/srv" TYPE FILE FILES
     "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalMap.srv"
     "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/QueryGlobalLocalization.srv"
+    "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalLocalizationEngine.srv"
     )
 endif()
 

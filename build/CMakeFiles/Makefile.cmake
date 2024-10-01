@@ -212,6 +212,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/ros/noetic/share/xmlrpcpp/cmake/xmlrpcpp-extras.cmake"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/xmlrpcppConfig-version.cmake"
   "/opt/ros/noetic/share/xmlrpcpp/cmake/xmlrpcppConfig.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVModules-release.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVModules.cmake"
   "/usr/local/share/cmake-3.26/Modules/CMakeCInformation.cmake"
   "/usr/local/share/cmake-3.26/Modules/CMakeCXXInformation.cmake"
   "/usr/local/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake"
@@ -395,4 +399,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "sentry_localization/CMakeFiles/sentry_userdefinition_generate_messages_py.dir/DependInfo.cmake"
   "sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/DependInfo.cmake"
   "sentry_localization/CMakeFiles/sentry_localization_nodelet.dir/DependInfo.cmake"
+  "sentry_localization/CMakeFiles/global_localization.dir/DependInfo.cmake"
+  "sentry_localization/CMakeFiles/global_localization_node.dir/DependInfo.cmake"
   )

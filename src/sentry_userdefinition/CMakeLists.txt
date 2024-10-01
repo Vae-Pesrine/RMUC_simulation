@@ -17,6 +17,7 @@ add_service_files(
   FILES
   SetGlobalMap.srv
   QueryGlobalLocalization.srv
+  SetGlobalLocalizationEngine.srv
 )
 
 generate_messages(

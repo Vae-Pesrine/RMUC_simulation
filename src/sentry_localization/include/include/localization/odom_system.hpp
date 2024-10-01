@@ -1,7 +1,7 @@
 #ifndef ODOM_SYSTEM_HPP
 #define ODOM_SYSTEM_HPP
 
-#include <unscented_kalman_filter.hpp>
+#include <include/localization/unscented_kalman_filter.hpp>
 
 namespace sentry_localization {
     
@@ -13,12 +13,11 @@ namespace sentry_localization {
  */
 class OdomSystem {
 public:
-  typedef float T;
-  typedef Eigen::Matrix<T, 3, 1> Vector3t;
-  typedef Eigen::Matrix<T, 4, 1> Vector4t;
-  typedef Eigen::Matrix<T, 4, 4> Matrix4t;
-  typedef Eigen::Matrix<T, Eigen::Dynamic, 1> VectorXt;
-  typedef Eigen::Quaternion<T> Quaterniont;
+  using Vector3t = Eigen::Matrix<float, 3, 1>;
+  using Vector4t = Eigen::Matrix<float, 4, 1>;
+  using Matrix4t = Eigen::Matrix<float, 4, 4>;
+  using VectorXt = Eigen::Matrix<float, Eigen::Dynamic, 1>;
+  using Quaterniont = Eigen::Quaternion<float>;
 
 public:
 

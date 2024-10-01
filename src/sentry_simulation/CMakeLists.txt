@@ -65,7 +65,7 @@ link_directories(
 )
 
 add_executable(key_control ${PROJECT_SOURCE_DIR}/src/key_control.cpp)
-target_link_libraries(key_control ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${PCL_LIBRARIES})
+target_link_libraries(key_control ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 
 add_library(sentry_simulation SHARED src/livox_points_plugin.cpp src/livox_ode_multiray_shape.cpp)
 target_link_libraries(sentry_simulation ${catkin_LIBRARIES} ${PCL_LIBRARIES} RayPlugin)

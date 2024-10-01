@@ -1,6 +1,0 @@
-#ifndef GLOBAL_LOCALIZATION_BBS_HPP
-#define GLOBAL_LOCALIZATION_BBS_HPP
-
-
-
-#endif

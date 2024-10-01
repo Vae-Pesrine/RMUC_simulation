@@ -438,6 +438,20 @@ _sentry_userdefinition_generate_messages_check_deps_QueryGlobalLocalization/fast
 .PHONY : _sentry_userdefinition_generate_messages_check_deps_QueryGlobalLocalization/fast
 
 # Convenience name for target.
+sentry_userdefinition/CMakeFiles/_sentry_userdefinition_generate_messages_check_deps_SetGlobalLocalizationEngine.dir/rule:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentry_userdefinition/CMakeFiles/_sentry_userdefinition_generate_messages_check_deps_SetGlobalLocalizationEngine.dir/rule
+.PHONY : sentry_userdefinition/CMakeFiles/_sentry_userdefinition_generate_messages_check_deps_SetGlobalLocalizationEngine.dir/rule
+
+# Convenience name for target.
+_sentry_userdefinition_generate_messages_check_deps_SetGlobalLocalizationEngine: sentry_userdefinition/CMakeFiles/_sentry_userdefinition_generate_messages_check_deps_SetGlobalLocalizationEngine.dir/rule
+.PHONY : _sentry_userdefinition_generate_messages_check_deps_SetGlobalLocalizationEngine
+
+# fast build rule for target.
+_sentry_userdefinition_generate_messages_check_deps_SetGlobalLocalizationEngine/fast:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_userdefinition/CMakeFiles/_sentry_userdefinition_generate_messages_check_deps_SetGlobalLocalizationEngine.dir/build.make sentry_userdefinition/CMakeFiles/_sentry_userdefinition_generate_messages_check_deps_SetGlobalLocalizationEngine.dir/build
+.PHONY : _sentry_userdefinition_generate_messages_check_deps_SetGlobalLocalizationEngine/fast
+
+# Convenience name for target.
 sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_cpp.dir/rule:
 	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_cpp.dir/rule
 .PHONY : sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_cpp.dir/rule
@@ -592,6 +606,7 @@ help:
 	@echo "... test"
 	@echo "... _sentry_userdefinition_generate_messages_check_deps_QueryGlobalLocalization"
 	@echo "... _sentry_userdefinition_generate_messages_check_deps_ScanMatchingStatus"
+	@echo "... _sentry_userdefinition_generate_messages_check_deps_SetGlobalLocalizationEngine"
 	@echo "... _sentry_userdefinition_generate_messages_check_deps_SetGlobalMap"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_eus"

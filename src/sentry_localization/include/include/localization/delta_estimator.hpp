@@ -11,11 +11,6 @@ namespace sentry_localization
 class DeltaEstimator
 {
 
-private:
-    Eigen::Isometry3f delta;
-    mutable std::mutex mutex;
-    pcl::Registration<pcl::PointXYZI, pcl::PointXYZI>::Ptr reg;
-    pcl::PointCloud<pcl::PointXYZI>::ConstPtr last_frame;
 
 public:
     DeltaEstimator(pcl::Registration<pcl::PointXYZI, pcl::PointXYZI>::Ptr reg) : delta(Eigen::Isometry3f::Identity()), reg(reg) {}
@@ -53,6 +48,12 @@ public:
         std::lock_guard<std::mutex> lock(mutex);
         return delta;
     }
+
+private:
+    Eigen::Isometry3f delta;
+    mutable std::mutex mutex;
+    pcl::Registration<pcl::PointXYZI, pcl::PointXYZI>::Ptr reg;
+    pcl::PointCloud<pcl::PointXYZI>::ConstPtr last_frame;
 };
 
 }
