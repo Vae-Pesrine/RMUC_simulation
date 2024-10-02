@@ -22,5 +22,5 @@ bbs:
   map_pyramid_level: 6
 
   # scan slice height range
-   scan_min_z: -0.2
-   scan_max_z: 0.2
+  scan_min_z: -0.2
+  scan_max_z: 0.2

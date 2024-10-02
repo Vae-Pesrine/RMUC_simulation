@@ -1368,17 +1368,17 @@ sentry_userdefinition_generate_messages_py/fast:
 .PHONY : sentry_userdefinition_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named globalmap_server_nodelet
+# Target rules for targets named GlobalmapServerNodelet
 
 # Build rule for target.
-globalmap_server_nodelet: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 globalmap_server_nodelet
-.PHONY : globalmap_server_nodelet
+GlobalmapServerNodelet: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 GlobalmapServerNodelet
+.PHONY : GlobalmapServerNodelet
 
 # fast build rule for target.
-globalmap_server_nodelet/fast:
-	$(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/build.make sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/build
-.PHONY : globalmap_server_nodelet/fast
+GlobalmapServerNodelet/fast:
+	$(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/build.make sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/build
+.PHONY : GlobalmapServerNodelet/fast
 
 #=============================================================================
 # Target rules for targets named sentry_localization_nodelet
@@ -1418,6 +1418,19 @@ global_localization_node: cmake_check_build_system
 global_localization_node/fast:
 	$(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization_node.dir/build.make sentry_localization/CMakeFiles/global_localization_node.dir/build
 .PHONY : global_localization_node/fast
+
+#=============================================================================
+# Target rules for targets named livox_to_point
+
+# Build rule for target.
+livox_to_point: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 livox_to_point
+.PHONY : livox_to_point
+
+# fast build rule for target.
+livox_to_point/fast:
+	$(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/livox_to_point.dir/build.make sentry_localization/CMakeFiles/livox_to_point.dir/build
+.PHONY : livox_to_point/fast
 
 # Help Target
 help:
@@ -1520,13 +1533,14 @@ help:
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_py"
+	@echo "... GlobalmapServerNodelet"
 	@echo "... global_localization"
 	@echo "... global_localization_node"
-	@echo "... globalmap_server_nodelet"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... livox_to_point"
 	@echo "... sentry_localization_nodelet"
 .PHONY : help
 

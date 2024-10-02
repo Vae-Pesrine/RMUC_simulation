@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.0.2)
 project(sentry_localization)
+set(CMAKE_BUILD_TYPE "RELEASE")
 
 find_package(catkin REQUIRED COMPONENTS
   nodelet  
@@ -19,26 +20,45 @@ find_package(catkin REQUIRED COMPONENTS
   ndt_omp
   sentry_userdefinition
 )
+find_package(PCL 1.7 REQUIRED)
+include_directories(${PCL_INCLUDE_DIRS})
+link_directories(${PCL_LIBRARY_DIRS})
+add_definitions(${PCL_DEFINITIONS})
+
+message(STATUS "PCL_INCLUDE_DIRS:" ${PCL_INCLUDE_DIRS})
+message(STATUS "PCL_LIBRARY_DIRS:" ${PCL_LIBRARY_DIRS})
+message(STATUS "PCL_DEFINITIONS:" ${PCL_DEFINITIONS})
+
+find_package(OpenMP)
+if (OPENMP_FOUND)
+    set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
+    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
+endif()
 
 find_package(OpenCV REQUIRED)
-# find_package(PCL 1.7 REQUIRED)
 include_directories(
   include
   ${catkin_INCLUDE_DIRS}
-  ${PCL_INCLUDE_DIRS}
   ${OpenCV_INCLUDE_DIRS}
 )
 
 
-add_library(globalmap_server_nodelet nodelet/globalmap_server_nodelet.cpp)
-target_link_libraries(globalmap_server_nodelet 
+catkin_package(
+ INCLUDE_DIRS include
+)
+
+add_library(GlobalmapServerNodelet 
+  nodelet/globalmap_server_nodelet.cpp
+)
+target_link_libraries(GlobalmapServerNodelet 
   ${catkin_LIBRARIES}
   ${PCL_LIBRARIES}
 )
 
 add_library(sentry_localization_nodelet 
   nodelet/sentry_localization_nodelet.cpp
-  src/pose_estimator.cpp)
+  src/pose_estimator.cpp
+)
 target_link_libraries(sentry_localization_nodelet 
   ${catkin_LIBRARIES}
   ${PCL_LIBRARIES}
@@ -55,8 +75,6 @@ target_link_libraries(global_localization
   ${OpenCV_LIBRARIES}
 )
 
-
-
 add_executable(global_localization_node src/global_localization.cpp)
 add_dependencies(global_localization_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(global_localization_node
@@ -65,7 +83,9 @@ target_link_libraries(global_localization_node
   ${PCL_LIBRARIES}
 )
 
-catkin_package(
- INCLUDE_DIRS include
-)
 
+add_executable(livox_to_point src/livox_to_pointcloud2.cpp)
+add_dependencies(livox_to_point ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(livox_to_point
+  ${catkin_LIBRARIES}
+)

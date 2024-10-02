@@ -1334,18 +1334,18 @@ sentry_userdefinition_generate_messages_py/fast:
 .PHONY : sentry_userdefinition_generate_messages_py/fast
 
 # Convenience name for target.
-sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/rule:
-	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/rule
-.PHONY : sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/rule
+sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/rule:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/rule
+.PHONY : sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/rule
 
 # Convenience name for target.
-globalmap_server_nodelet: sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/rule
-.PHONY : globalmap_server_nodelet
+GlobalmapServerNodelet: sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/rule
+.PHONY : GlobalmapServerNodelet
 
 # fast build rule for target.
-globalmap_server_nodelet/fast:
-	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/build.make sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/build
-.PHONY : globalmap_server_nodelet/fast
+GlobalmapServerNodelet/fast:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/build.make sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/build
+.PHONY : GlobalmapServerNodelet/fast
 
 # Convenience name for target.
 sentry_localization/CMakeFiles/sentry_localization_nodelet.dir/rule:
@@ -1388,6 +1388,20 @@ global_localization_node: sentry_localization/CMakeFiles/global_localization_nod
 global_localization_node/fast:
 	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization_node.dir/build.make sentry_localization/CMakeFiles/global_localization_node.dir/build
 .PHONY : global_localization_node/fast
+
+# Convenience name for target.
+sentry_localization/CMakeFiles/livox_to_point.dir/rule:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentry_localization/CMakeFiles/livox_to_point.dir/rule
+.PHONY : sentry_localization/CMakeFiles/livox_to_point.dir/rule
+
+# Convenience name for target.
+livox_to_point: sentry_localization/CMakeFiles/livox_to_point.dir/rule
+.PHONY : livox_to_point
+
+# fast build rule for target.
+livox_to_point/fast:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/livox_to_point.dir/build.make sentry_localization/CMakeFiles/livox_to_point.dir/build
+.PHONY : livox_to_point/fast
 
 apps/bbs_localization.o: apps/bbs_localization.cpp.o
 .PHONY : apps/bbs_localization.o
@@ -1514,7 +1528,7 @@ nodelet/globalmap_server_nodelet.o: nodelet/globalmap_server_nodelet.cpp.o
 
 # target to build an object file
 nodelet/globalmap_server_nodelet.cpp.o:
-	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/build.make sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/nodelet/globalmap_server_nodelet.cpp.o
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/build.make sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/nodelet/globalmap_server_nodelet.cpp.o
 .PHONY : nodelet/globalmap_server_nodelet.cpp.o
 
 nodelet/globalmap_server_nodelet.i: nodelet/globalmap_server_nodelet.cpp.i
@@ -1522,7 +1536,7 @@ nodelet/globalmap_server_nodelet.i: nodelet/globalmap_server_nodelet.cpp.i
 
 # target to preprocess a source file
 nodelet/globalmap_server_nodelet.cpp.i:
-	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/build.make sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/nodelet/globalmap_server_nodelet.cpp.i
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/build.make sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/nodelet/globalmap_server_nodelet.cpp.i
 .PHONY : nodelet/globalmap_server_nodelet.cpp.i
 
 nodelet/globalmap_server_nodelet.s: nodelet/globalmap_server_nodelet.cpp.s
@@ -1530,7 +1544,7 @@ nodelet/globalmap_server_nodelet.s: nodelet/globalmap_server_nodelet.cpp.s
 
 # target to generate assembly for a file
 nodelet/globalmap_server_nodelet.cpp.s:
-	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/build.make sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/nodelet/globalmap_server_nodelet.cpp.s
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/build.make sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/nodelet/globalmap_server_nodelet.cpp.s
 .PHONY : nodelet/globalmap_server_nodelet.cpp.s
 
 nodelet/sentry_localization_nodelet.o: nodelet/sentry_localization_nodelet.cpp.o
@@ -1580,6 +1594,30 @@ src/global_localization.s: src/global_localization.cpp.s
 src/global_localization.cpp.s:
 	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization_node.dir/build.make sentry_localization/CMakeFiles/global_localization_node.dir/src/global_localization.cpp.s
 .PHONY : src/global_localization.cpp.s
+
+src/livox_to_pointcloud2.o: src/livox_to_pointcloud2.cpp.o
+.PHONY : src/livox_to_pointcloud2.o
+
+# target to build an object file
+src/livox_to_pointcloud2.cpp.o:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/livox_to_point.dir/build.make sentry_localization/CMakeFiles/livox_to_point.dir/src/livox_to_pointcloud2.cpp.o
+.PHONY : src/livox_to_pointcloud2.cpp.o
+
+src/livox_to_pointcloud2.i: src/livox_to_pointcloud2.cpp.i
+.PHONY : src/livox_to_pointcloud2.i
+
+# target to preprocess a source file
+src/livox_to_pointcloud2.cpp.i:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/livox_to_point.dir/build.make sentry_localization/CMakeFiles/livox_to_point.dir/src/livox_to_pointcloud2.cpp.i
+.PHONY : src/livox_to_pointcloud2.cpp.i
+
+src/livox_to_pointcloud2.s: src/livox_to_pointcloud2.cpp.s
+.PHONY : src/livox_to_pointcloud2.s
+
+# target to generate assembly for a file
+src/livox_to_pointcloud2.cpp.s:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/livox_to_point.dir/build.make sentry_localization/CMakeFiles/livox_to_point.dir/src/livox_to_pointcloud2.cpp.s
+.PHONY : src/livox_to_pointcloud2.cpp.s
 
 src/pose_estimator.o: src/pose_estimator.cpp.o
 .PHONY : src/pose_estimator.o
@@ -1701,9 +1739,10 @@ help:
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_py"
+	@echo "... GlobalmapServerNodelet"
 	@echo "... global_localization"
 	@echo "... global_localization_node"
-	@echo "... globalmap_server_nodelet"
+	@echo "... livox_to_point"
 	@echo "... sentry_localization_nodelet"
 	@echo "... apps/bbs_localization.o"
 	@echo "... apps/bbs_localization.i"
@@ -1729,6 +1768,9 @@ help:
 	@echo "... src/global_localization.o"
 	@echo "... src/global_localization.i"
 	@echo "... src/global_localization.s"
+	@echo "... src/livox_to_pointcloud2.o"
+	@echo "... src/livox_to_pointcloud2.i"
+	@echo "... src/livox_to_pointcloud2.s"
 	@echo "... src/pose_estimator.o"
 	@echo "... src/pose_estimator.i"
 	@echo "... src/pose_estimator.s"

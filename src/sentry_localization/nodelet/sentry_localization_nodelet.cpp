@@ -56,7 +56,7 @@ public :
         
         InitParams();
         sub_imu = mt_nh.subscribe(pr_nh.param<std::string>("topic_imu", topic_imu), 256, &SentryLocalizationNodelet::imuCb, this); 
-        sub_points = mt_nh.subscribe(pr_nh.param<std::string>("topic_lidar", topic_laser), 5, &SentryLocalizationNodelet::pointsCb, this);
+        sub_points = mt_nh.subscribe(pr_nh.param<std::string>("topic_lidar", topic_lidar), 5, &SentryLocalizationNodelet::pointsCb, this);
         sub_globalmap = mt_nh.subscribe("/globalmap", 1, &SentryLocalizationNodelet::globalmapCb, this);
         sub_initialpose = mt_nh.subscribe("/initialpose", 1, &SentryLocalizationNodelet::initialposeCb, this);
 

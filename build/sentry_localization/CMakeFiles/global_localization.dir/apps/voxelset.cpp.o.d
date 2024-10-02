@@ -284,7 +284,8 @@ sentry_localization/CMakeFiles/global_localization.dir/apps/voxelset.cpp.o: \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/emmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/xmmintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/mm_malloc.h \
- /usr/include/c++/9/stdlib.h /usr/include/c++/9/cassert \
+ /usr/include/c++/9/stdlib.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/omp.h /usr/include/c++/9/cassert \
  /usr/include/eigen3/Eigen/src/Core/util/Constants.h \
  /usr/include/eigen3/Eigen/src/Core/util/Meta.h \
  /usr/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h \

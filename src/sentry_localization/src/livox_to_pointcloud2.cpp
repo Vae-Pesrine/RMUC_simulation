@@ -1,7 +1,10 @@
 #include <ros/ros.h>
+#include <pcl_conversions/pcl_conversions.h>
 #include <sensor_msgs/PointCloud2.h>
 #include <livox_ros_driver2/CustomMsg.h>
 
+ros::Publisher pub;
+ros::Subscriber sub;
 std::vector<livox_ros_driver2::CustomMsg::ConstPtr> livox_data;
 
 void cb(const livox_ros_driver2::CustomMsg::ConstPtr livox_msg_in)
@@ -12,12 +15,12 @@ void cb(const livox_ros_driver2::CustomMsg::ConstPtr livox_msg_in)
     }
 
     pcl::PointCloud<pcl::PointXYZINormal> pcl_in;
-    for(auto i : livox_data.size()){
+    for(std::size_t i = 0; i < livox_data.size(); ++i){
         auto livox_msg = livox_data[i];
         auto time_end = livox_msg->points.back().offset_time;
-
-        for(auto j : livox_msg->point_num){
-            pcl::PointCloud<pcl::PointXYZINormal> pt;
+        
+        for(int j = 0; j < livox_msg->point_num; ++j){
+            pcl::PointXYZINormal pt;
             pt.x = livox_msg->points[j].x;
             pt.y = livox_msg->points[j].y;
             pt.z = livox_msg->points[j].z;
@@ -35,7 +38,7 @@ void cb(const livox_ros_driver2::CustomMsg::ConstPtr livox_msg_in)
     pcl::toROSMsg(pcl_in, pcl_ros_msg);
     pcl_ros_msg.header.stamp.fromNSec(timebase_ns);
     pcl_ros_msg.header.frame_id = "/livox";
-    pub.publish(  v0-0-p09-09o0-98io09yu7ioyu7iop bnm,);
+    pub.publish(pcl_ros_msg);
     livox_data.clear();
 }
 
@@ -43,8 +46,8 @@ int main(int argc, char *argv[])
 {
     ros::init(argc, argv, "livox_to_pointcloud2");
     ros::NodeHandle nh;
-    ros::Subscriber sub = nh.subscribe<livox_ros_driver2::CustomMsg>("/livox_horizon_points", 100, cb);
-    ros::Publisher pub = nh.advertise<sensor_msgs::PointCloud2>("/lidar_points", 100);
+    sub = nh.subscribe<livox_ros_driver2::CustomMsg>("/livox_horizon_points", 100, cb);
+    pub = nh.advertise<sensor_msgs::PointCloud2>("/lidar_points", 100);
     ros::spin();
     return 0;
 }

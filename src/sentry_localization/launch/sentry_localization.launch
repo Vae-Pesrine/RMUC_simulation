@@ -1,19 +1,21 @@
 <launch>
-    <arg name="nodelet_manager" default="sentry_nodelet" />
-    <node pkg="nodelet" type="nodelet" name="sentry_nodelet" args="$(arg nodelet_manager)" output="screen" />
+    <!-- <node pkg="sentry_localization" type="livox_to_point" name="livox_to_point" output="screen" /> -->
 
-    <!-- globalmap server nodelet -->
-    <node pkg="nodelet" type="nodelet" name="globalmap_server_nodelet" args="load sentry_localization/GlobalmapServerNodelet $(nodelet_manager)">
+    <!-- <node pkg="sentry_localization" type="global_localization_node" name="global_localization_node" output="screen">
+        <rosparam file="$(find sentry_localization)/config/bbs_params.yaml" command="load" />
+        <rosparam file="$(find sentry_localization)/config/engine_params.yaml" command="load" />
+    </node> -->
+    
+    <node pkg="nodelet" type="nodelet" name="sentry_nodelet" args="manager" output="screen" />
+
+    <node pkg="nodelet" type="nodelet" name="test1" args="load sentry_localization/GlobalmapServerNodelet sentry_nodelet">
         <rosparam file="$(find sentry_localization)/config/globalmap_params.yaml" command="load" />
     </node>
 
-    <node pkg="sentry_localization" type="nodelet" name="sentry_localization_nodelet" args="load sentry-localization/SentryLocalizationNodelet $(nodelet_manager)">
-        <rosparam file="$(fine sentry_localization)/config/sentry_localization_params.yaml" command="load" />
-    </node>
+    <!-- <node pkg="nodelet" type="nodelet" name="test2" args="load sentry_localization/SentryLocalizationNodelet $(arg nodelet_manager)">
+        <rosparam file="$(find sentry_localization)/config/sentry_localization_params.yaml" command="load" />
+    </node> -->
+    
 
-    <node pkg="sentry_localization" type="global_localization" name="global_localization" output="screen">
-        <rosparam file="$(find sentry_localization)/config/bbs_params.yaml" command="load" />
-        <rosparam file="$(find sentry_localization)/config/engine_params.yaml" command="load" />
-    </node>
 
 </launch>
