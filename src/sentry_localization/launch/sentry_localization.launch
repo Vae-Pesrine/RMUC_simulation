@@ -1,5 +1,5 @@
 <launch>
-    <!-- <node pkg="sentry_localization" type="livox_to_point" name="livox_to_point" output="screen" /> -->
+    <node pkg="sentry_localization" type="livox_to_point" name="livox_to_point" output="screen" />
 
     <!-- <node pkg="sentry_localization" type="global_localization_node" name="global_localization_node" output="screen">
         <rosparam file="$(find sentry_localization)/config/bbs_params.yaml" command="load" />

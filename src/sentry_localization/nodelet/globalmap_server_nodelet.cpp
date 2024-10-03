@@ -21,20 +21,25 @@ namespace sentry_localization
 
 class GlobalmapServerNodelet : public nodelet::Nodelet
 {
+
+public:
+    GlobalmapServerNodelet();
+    virtual ~GlobalmapServerNodelet();
+
+    void onInit()  override
+    {
+        nh = getNodeHandle();
+        mt_nh = getMTNodeHandle();
+        pr_nh = getPrivateNodeHandle();
+
+        InitParams();
+        pub_globalmap = nh.advertise<sensor_msgs::PointCloud2>("/globalmap", 5, true);
+        sub_updatemap = nh.subscribe("/map_request/pcd", 10, &GlobalmapServerNodelet::globalmap_updateCb, this);
+        //the first true创建定时器时开始计时      the second true 创建定时器时设置为自动重启
+        pub_globalmap_timer = nh.createWallTimer(ros::WallDuration(1.0), &GlobalmapServerNodelet::globalmap_onceCb, this, true, true);
+    }
+
 private:
-    ros::NodeHandle nh;
-    ros::NodeHandle mt_nh;
-    ros::NodeHandle pr_nh;
-    ros::Publisher pub_globalmap;
-    ros::Subscriber sub_updatemap;
-    ros::WallTimer pub_globalmap_timer;
-
-    std::string globalmap_pcdfile;
-    double downsample_resolution;
-    sensor_msgs::PointCloud2 globalmap_roscloud;
-
-    pcl::PointCloud<pcl::PointXYZ>::Ptr globalmap_cloud;
-
     void InitParams()
     {
         pr_nh.getParam("downsample_resolution", downsample_resolution);
@@ -84,22 +89,19 @@ private:
         pub_globalmap.publish(globalmap_roscloud);
     }
 
-public:
-    GlobalmapServerNodelet();
-    virtual ~GlobalmapServerNodelet();
+private:
+    ros::NodeHandle nh;
+    ros::NodeHandle mt_nh;
+    ros::NodeHandle pr_nh;
+    ros::Publisher pub_globalmap;
+    ros::Subscriber sub_updatemap;
+    ros::WallTimer pub_globalmap_timer;
 
-    void onInit()  override
-    {
-        nh = getNodeHandle();
-        mt_nh = getMTNodeHandle();
-        pr_nh = getPrivateNodeHandle();
+    std::string globalmap_pcdfile;
+    double downsample_resolution;
+    sensor_msgs::PointCloud2 globalmap_roscloud;
 
-        InitParams();
-        pub_globalmap = nh.advertise<sensor_msgs::PointCloud2>("/globalmap", 5, true);
-        sub_updatemap = nh.subscribe("/map_request/pcd", 10, &GlobalmapServerNodelet::globalmap_updateCb, this);
-        //the first true创建定时器时开始计时      the second true 创建定时器时设置为自动重启
-        pub_globalmap_timer = nh.createWallTimer(ros::WallDuration(1.0), &GlobalmapServerNodelet::globalmap_onceCb, this, true, true);
-    }
+    pcl::PointCloud<pcl::PointXYZ>::Ptr globalmap_cloud;
 
 };
 

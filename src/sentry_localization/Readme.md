@@ -1,6 +1,3 @@
-//jgy is a very very very big pig 
-//syt is a clever girl, actually a little lazy pig!!!!!!!!!!!!!!!!!!!!!!
-
 onInit()    初始化参数InitParams()
             订阅imu和雷达的数据，全局地图，初始位姿
             发布配准后的点云，配准状态，里程计

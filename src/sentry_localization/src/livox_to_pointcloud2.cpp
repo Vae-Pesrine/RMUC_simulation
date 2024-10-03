@@ -37,7 +37,7 @@ void cb(const livox_ros_driver2::CustomMsg::ConstPtr livox_msg_in)
     sensor_msgs::PointCloud2 pcl_ros_msg;
     pcl::toROSMsg(pcl_in, pcl_ros_msg);
     pcl_ros_msg.header.stamp.fromNSec(timebase_ns);
-    pcl_ros_msg.header.frame_id = "/livox";
+    pcl_ros_msg.header.frame_id = livox_msg_in->header.frame_id;
     pub.publish(pcl_ros_msg);
     livox_data.clear();
 }

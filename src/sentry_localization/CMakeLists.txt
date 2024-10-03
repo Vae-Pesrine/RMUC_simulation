@@ -20,7 +20,7 @@ find_package(catkin REQUIRED COMPONENTS
   ndt_omp
   sentry_userdefinition
 )
-find_package(PCL 1.7 REQUIRED)
+find_package(PCL 1.7 REQUIRED COMPOMENTS common io)
 include_directories(${PCL_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
@@ -28,6 +28,11 @@ add_definitions(${PCL_DEFINITIONS})
 message(STATUS "PCL_INCLUDE_DIRS:" ${PCL_INCLUDE_DIRS})
 message(STATUS "PCL_LIBRARY_DIRS:" ${PCL_LIBRARY_DIRS})
 message(STATUS "PCL_DEFINITIONS:" ${PCL_DEFINITIONS})
+
+# if(POLICY CMP0074)
+#   cmake_policy(PUSH)
+#   cmake_policy(SET CMP0074 NEW)
+# endif()
 
 find_package(OpenMP)
 if (OPENMP_FOUND)
@@ -45,6 +50,8 @@ include_directories(
 
 catkin_package(
  INCLUDE_DIRS include
+ LIBRARIES ${PROJECT_NAME}
+ CATKIN_DEPENDS roscpp std_msgs nodelet
 )
 
 add_library(GlobalmapServerNodelet 
