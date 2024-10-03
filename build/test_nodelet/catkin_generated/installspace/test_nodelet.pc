@@ -1,0 +1,8 @@
+prefix=/home/jgy/RMUC_simulation/install
+
+Name: test_nodelet
+Description: Description of test_nodelet
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

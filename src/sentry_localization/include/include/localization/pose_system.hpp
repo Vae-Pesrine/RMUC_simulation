@@ -17,7 +17,7 @@ public :
     using Quaterniont = Eigen::Quaternion<float>;
 public :
     PoseSystem() { dt = 0.01; }
-    ~PoseSystem();
+    ~PoseSystem() {}
 
     VectorXt f(const VectorXt& state) const{
         VectorXt next_state(16);

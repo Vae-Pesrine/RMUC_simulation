@@ -134,7 +134,7 @@ gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest_main.dir/clean
 # Directory level rules for directory sentry_localization
 
 # Recursive "all" directory target.
-sentry_localization/all: sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/all
+sentry_localization/all: sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/all
 sentry_localization/all: sentry_localization/CMakeFiles/sentry_localization_nodelet.dir/all
 sentry_localization/all: sentry_localization/CMakeFiles/global_localization.dir/all
 sentry_localization/all: sentry_localization/CMakeFiles/global_localization_node.dir/all
@@ -229,7 +229,7 @@ sentry_localization/clean: sentry_localization/CMakeFiles/sentry_userdefinition_
 sentry_localization/clean: sentry_localization/CMakeFiles/sentry_userdefinition_generate_messages_lisp.dir/clean
 sentry_localization/clean: sentry_localization/CMakeFiles/sentry_userdefinition_generate_messages_nodejs.dir/clean
 sentry_localization/clean: sentry_localization/CMakeFiles/sentry_userdefinition_generate_messages_py.dir/clean
-sentry_localization/clean: sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/clean
+sentry_localization/clean: sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/clean
 sentry_localization/clean: sentry_localization/CMakeFiles/sentry_localization_nodelet.dir/clean
 sentry_localization/clean: sentry_localization/CMakeFiles/global_localization.dir/clean
 sentry_localization/clean: sentry_localization/CMakeFiles/global_localization_node.dir/clean
@@ -2630,30 +2630,30 @@ sentry_localization/CMakeFiles/sentry_userdefinition_generate_messages_py.dir/cl
 .PHONY : sentry_localization/CMakeFiles/sentry_userdefinition_generate_messages_py.dir/clean
 
 #=============================================================================
-# Target rules for target sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir
+# Target rules for target sentry_localization/CMakeFiles/globalmap_server_nodelet.dir
 
 # All Build rule for target.
-sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/all:
-	$(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/build.make sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/depend
-	$(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/build.make sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=1,2 "Built target GlobalmapServerNodelet"
-.PHONY : sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/all
+sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/all:
+	$(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/build.make sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/depend
+	$(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/build.make sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=9,10 "Built target globalmap_server_nodelet"
+.PHONY : sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/all
 
 # Build rule for subdir invocation for target.
-sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/rule: cmake_check_build_system
+sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jgy/RMUC_simulation/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jgy/RMUC_simulation/build/CMakeFiles 0
-.PHONY : sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/rule
+.PHONY : sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/rule
 
 # Convenience name for target.
-GlobalmapServerNodelet: sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/rule
-.PHONY : GlobalmapServerNodelet
+globalmap_server_nodelet: sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/rule
+.PHONY : globalmap_server_nodelet
 
 # clean rule for target.
-sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/clean:
-	$(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/build.make sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/clean
-.PHONY : sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/clean
+sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/clean:
+	$(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/build.make sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/clean
+.PHONY : sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/clean
 
 #=============================================================================
 # Target rules for target sentry_localization/CMakeFiles/sentry_localization_nodelet.dir
@@ -2688,7 +2688,7 @@ sentry_localization/CMakeFiles/sentry_localization_nodelet.dir/clean:
 sentry_localization/CMakeFiles/global_localization.dir/all:
 	$(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization.dir/build.make sentry_localization/CMakeFiles/global_localization.dir/depend
 	$(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization.dir/build.make sentry_localization/CMakeFiles/global_localization.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=3,4,5,6,7,8 "Built target global_localization"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target global_localization"
 .PHONY : sentry_localization/CMakeFiles/global_localization.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2797,7 +2797,7 @@ sentry_localization/CMakeFiles/global_localization_node.dir/all: sentry_localiza
 sentry_localization/CMakeFiles/global_localization_node.dir/all: sentry_localization/CMakeFiles/global_localization.dir/all
 	$(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization_node.dir/build.make sentry_localization/CMakeFiles/global_localization_node.dir/depend
 	$(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/global_localization_node.dir/build.make sentry_localization/CMakeFiles/global_localization_node.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=9,10 "Built target global_localization_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=7,8 "Built target global_localization_node"
 .PHONY : sentry_localization/CMakeFiles/global_localization_node.dir/all
 
 # Build rule for subdir invocation for target.

@@ -23,8 +23,8 @@ class GlobalmapServerNodelet : public nodelet::Nodelet
 {
 
 public:
-    GlobalmapServerNodelet();
-    virtual ~GlobalmapServerNodelet();
+    GlobalmapServerNodelet() {}
+    virtual ~GlobalmapServerNodelet() {}
 
     void onInit()  override
     {
@@ -47,9 +47,9 @@ private:
 
         //reading pcd file
         globalmap_cloud.reset(new pcl::PointCloud<pcl::PointXYZ>());
-        std::cout << BLUE << "\033[1;32mReading pcd file " << globalmap_pcdfile << RESET << std::endl;
+        std::cout << BLUE << "Reading pcd file " << globalmap_pcdfile << RESET << std::endl;
         if(pcl::io::loadPCDFile(globalmap_pcdfile, *globalmap_cloud) == -1)
-            PCL_ERROR("Could not read file RMUC.pcd");
+            PCL_ERROR("Could not read file");
 
         //voxel grid filter
         pcl::PointCloud<pcl::PointXYZ>::Ptr filtered_cloud(new pcl::PointCloud<pcl::PointXYZ>());

@@ -37,8 +37,8 @@ public:
         setEngineName(private_nh.param<std::string>("global_localization_engine", "FPFH_RANSAC"));
 
         set_engine_server = private_nh.advertiseService("set_engine", &GlobalLocalization::set_engine, this);
-        set_globalmap_server = private_nh.advertiseService("set_globalmap", &GlobalLocalization::set_global_map, this);
-        query_server = private_nh.advertiseService("query", &GlobalLocalization::query, this);
+        set_globalmap_server = private_nh.advertiseService("/sentry_userdefinition/set_globalmap", &GlobalLocalization::set_global_map, this);
+        query_server = private_nh.advertiseService("/sentry_userdefinition/query", &GlobalLocalization::query, this);
     }
 
 private:

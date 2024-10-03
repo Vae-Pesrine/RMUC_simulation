@@ -22,17 +22,6 @@ find_package(catkin REQUIRED COMPONENTS
 )
 find_package(PCL 1.7 REQUIRED COMPOMENTS common io)
 include_directories(${PCL_INCLUDE_DIRS})
-link_directories(${PCL_LIBRARY_DIRS})
-add_definitions(${PCL_DEFINITIONS})
-
-message(STATUS "PCL_INCLUDE_DIRS:" ${PCL_INCLUDE_DIRS})
-message(STATUS "PCL_LIBRARY_DIRS:" ${PCL_LIBRARY_DIRS})
-message(STATUS "PCL_DEFINITIONS:" ${PCL_DEFINITIONS})
-
-# if(POLICY CMP0074)
-#   cmake_policy(PUSH)
-#   cmake_policy(SET CMP0074 NEW)
-# endif()
 
 find_package(OpenMP)
 if (OPENMP_FOUND)
@@ -54,10 +43,10 @@ catkin_package(
  CATKIN_DEPENDS roscpp std_msgs nodelet
 )
 
-add_library(GlobalmapServerNodelet 
+add_library(globalmap_server_nodelet 
   nodelet/globalmap_server_nodelet.cpp
 )
-target_link_libraries(GlobalmapServerNodelet 
+target_link_libraries(globalmap_server_nodelet
   ${catkin_LIBRARIES}
   ${PCL_LIBRARIES}
 )

@@ -140,7 +140,7 @@ private :
         //transform pointcloud into base frame id
         std::string tf_error;
         pcl::PointCloud<pcl::PointXYZI>::Ptr livox_cloud_out(new pcl::PointCloud<pcl::PointXYZI>());
-        if(this->tf_buffer.canTransform(base_frame_id, livox_cloud->header.frame_id, stamp, ros::Duration(1.0), &tf_error)){
+        if(this->tf_buffer.canTransform(base_frame_id, livox_cloud->header.frame_id, stamp, ros::Duration(0.1), &tf_error)){
             if(!pcl_ros::transformPointCloud(base_frame_id, *livox_cloud, *livox_cloud_out, this->tf_buffer)){
                 std::cout << RED << "Could not transform livox cloud to target frame!" << RESET << std::endl;
                 return;

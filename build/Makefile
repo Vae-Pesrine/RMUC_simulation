@@ -1368,17 +1368,17 @@ sentry_userdefinition_generate_messages_py/fast:
 .PHONY : sentry_userdefinition_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named GlobalmapServerNodelet
+# Target rules for targets named globalmap_server_nodelet
 
 # Build rule for target.
-GlobalmapServerNodelet: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 GlobalmapServerNodelet
-.PHONY : GlobalmapServerNodelet
+globalmap_server_nodelet: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 globalmap_server_nodelet
+.PHONY : globalmap_server_nodelet
 
 # fast build rule for target.
-GlobalmapServerNodelet/fast:
-	$(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/build.make sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/build
-.PHONY : GlobalmapServerNodelet/fast
+globalmap_server_nodelet/fast:
+	$(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/build.make sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/build
+.PHONY : globalmap_server_nodelet/fast
 
 #=============================================================================
 # Target rules for targets named sentry_localization_nodelet
@@ -1533,9 +1533,9 @@ help:
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_py"
-	@echo "... GlobalmapServerNodelet"
 	@echo "... global_localization"
 	@echo "... global_localization_node"
+	@echo "... globalmap_server_nodelet"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"

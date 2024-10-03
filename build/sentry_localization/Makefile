@@ -1334,18 +1334,18 @@ sentry_userdefinition_generate_messages_py/fast:
 .PHONY : sentry_userdefinition_generate_messages_py/fast
 
 # Convenience name for target.
-sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/rule:
-	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/rule
-.PHONY : sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/rule
+sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/rule:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/rule
+.PHONY : sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/rule
 
 # Convenience name for target.
-GlobalmapServerNodelet: sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/rule
-.PHONY : GlobalmapServerNodelet
+globalmap_server_nodelet: sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/rule
+.PHONY : globalmap_server_nodelet
 
 # fast build rule for target.
-GlobalmapServerNodelet/fast:
-	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/build.make sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/build
-.PHONY : GlobalmapServerNodelet/fast
+globalmap_server_nodelet/fast:
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/build.make sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/build
+.PHONY : globalmap_server_nodelet/fast
 
 # Convenience name for target.
 sentry_localization/CMakeFiles/sentry_localization_nodelet.dir/rule:
@@ -1528,7 +1528,7 @@ nodelet/globalmap_server_nodelet.o: nodelet/globalmap_server_nodelet.cpp.o
 
 # target to build an object file
 nodelet/globalmap_server_nodelet.cpp.o:
-	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/build.make sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/nodelet/globalmap_server_nodelet.cpp.o
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/build.make sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/nodelet/globalmap_server_nodelet.cpp.o
 .PHONY : nodelet/globalmap_server_nodelet.cpp.o
 
 nodelet/globalmap_server_nodelet.i: nodelet/globalmap_server_nodelet.cpp.i
@@ -1536,7 +1536,7 @@ nodelet/globalmap_server_nodelet.i: nodelet/globalmap_server_nodelet.cpp.i
 
 # target to preprocess a source file
 nodelet/globalmap_server_nodelet.cpp.i:
-	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/build.make sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/nodelet/globalmap_server_nodelet.cpp.i
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/build.make sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/nodelet/globalmap_server_nodelet.cpp.i
 .PHONY : nodelet/globalmap_server_nodelet.cpp.i
 
 nodelet/globalmap_server_nodelet.s: nodelet/globalmap_server_nodelet.cpp.s
@@ -1544,7 +1544,7 @@ nodelet/globalmap_server_nodelet.s: nodelet/globalmap_server_nodelet.cpp.s
 
 # target to generate assembly for a file
 nodelet/globalmap_server_nodelet.cpp.s:
-	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/build.make sentry_localization/CMakeFiles/GlobalmapServerNodelet.dir/nodelet/globalmap_server_nodelet.cpp.s
+	cd /home/jgy/RMUC_simulation/build && $(MAKE) $(MAKESILENT) -f sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/build.make sentry_localization/CMakeFiles/globalmap_server_nodelet.dir/nodelet/globalmap_server_nodelet.cpp.s
 .PHONY : nodelet/globalmap_server_nodelet.cpp.s
 
 nodelet/sentry_localization_nodelet.o: nodelet/sentry_localization_nodelet.cpp.o
@@ -1739,9 +1739,9 @@ help:
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_py"
-	@echo "... GlobalmapServerNodelet"
 	@echo "... global_localization"
 	@echo "... global_localization_node"
+	@echo "... globalmap_server_nodelet"
 	@echo "... livox_to_point"
 	@echo "... sentry_localization_nodelet"
 	@echo "... apps/bbs_localization.o"
