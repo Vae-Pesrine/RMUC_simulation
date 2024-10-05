@@ -163,7 +163,7 @@ void publish_init_map(const ros::Publisher & pubLaserCloudFullRes)
     pcl::toROSMsg(*init_feats_world, laserCloudmsg);
         
     laserCloudmsg.header.stamp = ros::Time().fromSec(lidar_end_time);
-    laserCloudmsg.header.frame_id = "camera_init";
+    laserCloudmsg.header.frame_id = "odom";
     pubLaserCloudFullRes.publish(laserCloudmsg);
 }
 
@@ -191,7 +191,7 @@ void publish_frame_world(const ros::Publisher & pubLaserCloudFullRes)
         pcl::toROSMsg(*laserCloudWorld, laserCloudmsg);
         
         laserCloudmsg.header.stamp = ros::Time().fromSec(lidar_end_time);
-        laserCloudmsg.header.frame_id = "camera_init";
+        laserCloudmsg.header.frame_id = "odom";
         pubLaserCloudFullRes.publish(laserCloudmsg);
         // publish_count -= PUBFRAME_PERIOD;
     }
@@ -244,7 +244,7 @@ void publish_frame_body(const ros::Publisher & pubLaserCloudFull_body)
     sensor_msgs::PointCloud2 laserCloudmsg;
     pcl::toROSMsg(*laserCloudIMUBody, laserCloudmsg);
     laserCloudmsg.header.stamp = ros::Time().fromSec(lidar_end_time);
-    laserCloudmsg.header.frame_id = "body";
+    laserCloudmsg.header.frame_id = "base_link";
     pubLaserCloudFull_body.publish(laserCloudmsg);
     // publish_count -= PUBFRAME_PERIOD;
 }
@@ -280,8 +280,8 @@ void set_posestamp(T & out)
 // 发布里程计信息，并广播TF变换
 void publish_odometry(const ros::Publisher & pubOdomAftMapped)
 {
-    odomAftMapped.header.frame_id = "camera_init";
-    odomAftMapped.child_frame_id = "body";
+    odomAftMapped.header.frame_id = "odom";
+    odomAftMapped.child_frame_id = "base_link";
     if (publish_odometry_without_downsample)
     {
         odomAftMapped.header.stamp = ros::Time().fromSec(time_current);
@@ -305,7 +305,7 @@ void publish_odometry(const ros::Publisher & pubOdomAftMapped)
     q.setY(odomAftMapped.pose.pose.orientation.y);
     q.setZ(odomAftMapped.pose.pose.orientation.z);
     transform.setRotation( q );
-    br.sendTransform( tf::StampedTransform( transform, odomAftMapped.header.stamp, "camera_init", "body") );
+    br.sendTransform( tf::StampedTransform( transform, odomAftMapped.header.stamp, "odom", "base_link") );
 }
 
 // 发布路径信息
@@ -314,7 +314,7 @@ void publish_path(const ros::Publisher pubPath)
     set_posestamp(msg_body_pose.pose);
     // msg_body_pose.header.stamp = ros::Time::now();
     msg_body_pose.header.stamp = ros::Time().fromSec(lidar_end_time);
-    msg_body_pose.header.frame_id = "camera_init";
+    msg_body_pose.header.frame_id = "odom";
     static int jjj = 0;
     jjj++;
     // if (jjj % 2 == 0) // if path is too large, the rvis will crash
@@ -335,7 +335,7 @@ int main(int argc, char** argv)
     ivox_ = std::make_shared<IVoxType>(ivox_options_);
     
     path.header.stamp    = ros::Time().fromSec(lidar_end_time);
-    path.header.frame_id ="camera_init";
+    path.header.frame_id ="odom";
 
     /*** variables definition for counting ***/
     int frame_num = 0;

@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_LocalizationInfo.py"
   "/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_ScanMatchingStatus.py"
   "/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/__init__.py"
   "/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_QueryGlobalLocalization.py"

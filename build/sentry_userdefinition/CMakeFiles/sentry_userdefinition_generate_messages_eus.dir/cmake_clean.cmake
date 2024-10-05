@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "/home/jgy/RMUC_simulation/devel/share/roseus/ros/sentry_userdefinition/manifest.l"
+  "/home/jgy/RMUC_simulation/devel/share/roseus/ros/sentry_userdefinition/msg/LocalizationInfo.l"
   "/home/jgy/RMUC_simulation/devel/share/roseus/ros/sentry_userdefinition/msg/ScanMatchingStatus.l"
   "/home/jgy/RMUC_simulation/devel/share/roseus/ros/sentry_userdefinition/srv/QueryGlobalLocalization.l"
   "/home/jgy/RMUC_simulation/devel/share/roseus/ros/sentry_userdefinition/srv/SetGlobalLocalizationEngine.l"

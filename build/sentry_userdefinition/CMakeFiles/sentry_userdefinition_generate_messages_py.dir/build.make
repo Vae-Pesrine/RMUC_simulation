@@ -67,64 +67,73 @@ include sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages
 include sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_py.dir/progress.make
 
 sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_py: /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_ScanMatchingStatus.py
+sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_py: /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_LocalizationInfo.py
 sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_py: /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_SetGlobalMap.py
 sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_py: /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_QueryGlobalLocalization.py
 sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_py: /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_SetGlobalLocalizationEngine.py
 sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_py: /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/__init__.py
 sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_py: /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/__init__.py
 
+/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_LocalizationInfo.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_LocalizationInfo.py: /home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/LocalizationInfo.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG sentry_userdefinition/LocalizationInfo"
+	cd /home/jgy/RMUC_simulation/build/sentry_userdefinition && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/LocalizationInfo.msg -Isentry_userdefinition:/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p sentry_userdefinition -o /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg
+
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_ScanMatchingStatus.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_ScanMatchingStatus.py: /home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/ScanMatchingStatus.msg
-/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_ScanMatchingStatus.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_ScanMatchingStatus.py: /opt/ros/noetic/share/geometry_msgs/msg/Transform.msg
-/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_ScanMatchingStatus.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_ScanMatchingStatus.py: /opt/ros/noetic/share/std_msgs/msg/String.msg
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_ScanMatchingStatus.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG sentry_userdefinition/ScanMatchingStatus"
+/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_ScanMatchingStatus.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_ScanMatchingStatus.py: /opt/ros/noetic/share/geometry_msgs/msg/Transform.msg
+/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_ScanMatchingStatus.py: /opt/ros/noetic/share/std_msgs/msg/String.msg
+/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_ScanMatchingStatus.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG sentry_userdefinition/ScanMatchingStatus"
 	cd /home/jgy/RMUC_simulation/build/sentry_userdefinition && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/ScanMatchingStatus.msg -Isentry_userdefinition:/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p sentry_userdefinition -o /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg
 
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/__init__.py: /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_ScanMatchingStatus.py
+/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/__init__.py: /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_LocalizationInfo.py
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/__init__.py: /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_SetGlobalMap.py
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/__init__.py: /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_QueryGlobalLocalization.py
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/__init__.py: /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_SetGlobalLocalizationEngine.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for sentry_userdefinition"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python msg __init__.py for sentry_userdefinition"
 	cd /home/jgy/RMUC_simulation/build/sentry_userdefinition && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg --initpy
 
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_QueryGlobalLocalization.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_QueryGlobalLocalization.py: /home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/QueryGlobalLocalization.srv
-/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_QueryGlobalLocalization.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_QueryGlobalLocalization.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_QueryGlobalLocalization.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_QueryGlobalLocalization.py: /opt/ros/noetic/share/sensor_msgs/msg/PointCloud2.msg
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_QueryGlobalLocalization.py: /opt/ros/noetic/share/sensor_msgs/msg/PointField.msg
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_QueryGlobalLocalization.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV sentry_userdefinition/QueryGlobalLocalization"
+/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_QueryGlobalLocalization.py: /opt/ros/noetic/share/sensor_msgs/msg/PointCloud2.msg
+/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_QueryGlobalLocalization.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_QueryGlobalLocalization.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python code from SRV sentry_userdefinition/QueryGlobalLocalization"
 	cd /home/jgy/RMUC_simulation/build/sentry_userdefinition && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/QueryGlobalLocalization.srv -Isentry_userdefinition:/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p sentry_userdefinition -o /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv
 
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_SetGlobalLocalizationEngine.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_SetGlobalLocalizationEngine.py: /home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalLocalizationEngine.srv
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_SetGlobalLocalizationEngine.py: /opt/ros/noetic/share/std_msgs/msg/String.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python code from SRV sentry_userdefinition/SetGlobalLocalizationEngine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python code from SRV sentry_userdefinition/SetGlobalLocalizationEngine"
 	cd /home/jgy/RMUC_simulation/build/sentry_userdefinition && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalLocalizationEngine.srv -Isentry_userdefinition:/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p sentry_userdefinition -o /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv
 
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_SetGlobalMap.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_SetGlobalMap.py: /home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalMap.srv
-/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_SetGlobalMap.py: /opt/ros/noetic/share/sensor_msgs/msg/PointField.msg
-/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_SetGlobalMap.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_SetGlobalMap.py: /opt/ros/noetic/share/sensor_msgs/msg/PointCloud2.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python code from SRV sentry_userdefinition/SetGlobalMap"
+/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_SetGlobalMap.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_SetGlobalMap.py: /opt/ros/noetic/share/sensor_msgs/msg/PointField.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python code from SRV sentry_userdefinition/SetGlobalMap"
 	cd /home/jgy/RMUC_simulation/build/sentry_userdefinition && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalMap.srv -Isentry_userdefinition:/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p sentry_userdefinition -o /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv
 
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/__init__.py: /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_ScanMatchingStatus.py
+/home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/__init__.py: /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_LocalizationInfo.py
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/__init__.py: /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_SetGlobalMap.py
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/__init__.py: /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_QueryGlobalLocalization.py
 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/__init__.py: /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_SetGlobalLocalizationEngine.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python srv __init__.py for sentry_userdefinition"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Python srv __init__.py for sentry_userdefinition"
 	cd /home/jgy/RMUC_simulation/build/sentry_userdefinition && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv --initpy
 
 sentry_userdefinition_generate_messages_py: sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_py
+sentry_userdefinition_generate_messages_py: /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_LocalizationInfo.py
 sentry_userdefinition_generate_messages_py: /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_ScanMatchingStatus.py
 sentry_userdefinition_generate_messages_py: /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/__init__.py
 sentry_userdefinition_generate_messages_py: /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_QueryGlobalLocalization.py

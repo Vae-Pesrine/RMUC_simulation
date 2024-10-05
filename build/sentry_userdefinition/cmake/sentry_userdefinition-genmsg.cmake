@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "sentry_userdefinition: 1 messages, 3 services")
+message(STATUS "sentry_userdefinition: 2 messages, 3 services")
 
 set(MSG_I_FLAGS "-Isentry_userdefinition:/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg;-Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg")
 
@@ -19,17 +19,22 @@ add_custom_target(sentry_userdefinition_generate_messages ALL)
 
 get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/ScanMatchingStatus.msg" NAME_WE)
 add_custom_target(_sentry_userdefinition_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "sentry_userdefinition" "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/ScanMatchingStatus.msg" "std_msgs/Header:geometry_msgs/Transform:geometry_msgs/Quaternion:std_msgs/String:geometry_msgs/Vector3"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "sentry_userdefinition" "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/ScanMatchingStatus.msg" "geometry_msgs/Vector3:geometry_msgs/Quaternion:geometry_msgs/Transform:std_msgs/String:std_msgs/Header"
+)
+
+get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/LocalizationInfo.msg" NAME_WE)
+add_custom_target(_sentry_userdefinition_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "sentry_userdefinition" "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/LocalizationInfo.msg" ""
 )
 
 get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalMap.srv" NAME_WE)
 add_custom_target(_sentry_userdefinition_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "sentry_userdefinition" "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalMap.srv" "sensor_msgs/PointField:std_msgs/Header:sensor_msgs/PointCloud2"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "sentry_userdefinition" "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalMap.srv" "sensor_msgs/PointCloud2:std_msgs/Header:sensor_msgs/PointField"
 )
 
 get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/QueryGlobalLocalization.srv" NAME_WE)
 add_custom_target(_sentry_userdefinition_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "sentry_userdefinition" "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/QueryGlobalLocalization.srv" "std_msgs/Header:geometry_msgs/Pose:geometry_msgs/Quaternion:sensor_msgs/PointCloud2:sensor_msgs/PointField:geometry_msgs/Point"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "sentry_userdefinition" "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/QueryGlobalLocalization.srv" "geometry_msgs/Quaternion:sensor_msgs/PointField:geometry_msgs/Point:sensor_msgs/PointCloud2:geometry_msgs/Pose:std_msgs/Header"
 )
 
 get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalLocalizationEngine.srv" NAME_WE)
@@ -46,7 +51,13 @@ add_custom_target(_sentry_userdefinition_generate_messages_check_deps_${_filenam
 _generate_msg_cpp(sentry_userdefinition
   "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/ScanMatchingStatus.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/sentry_userdefinition
+)
+_generate_msg_cpp(sentry_userdefinition
+  "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/LocalizationInfo.msg"
+  "${MSG_I_FLAGS}"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/sentry_userdefinition
 )
 
@@ -54,13 +65,13 @@ _generate_msg_cpp(sentry_userdefinition
 _generate_srv_cpp(sentry_userdefinition
   "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalMap.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/sentry_userdefinition
 )
 _generate_srv_cpp(sentry_userdefinition
   "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/QueryGlobalLocalization.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/sentry_userdefinition
 )
 _generate_srv_cpp(sentry_userdefinition
@@ -84,6 +95,8 @@ add_dependencies(sentry_userdefinition_generate_messages sentry_userdefinition_g
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/ScanMatchingStatus.msg" NAME_WE)
 add_dependencies(sentry_userdefinition_generate_messages_cpp _sentry_userdefinition_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/LocalizationInfo.msg" NAME_WE)
+add_dependencies(sentry_userdefinition_generate_messages_cpp _sentry_userdefinition_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalMap.srv" NAME_WE)
 add_dependencies(sentry_userdefinition_generate_messages_cpp _sentry_userdefinition_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/QueryGlobalLocalization.srv" NAME_WE)
@@ -103,7 +116,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS sentry_userdefinition_generate_mess
 _generate_msg_eus(sentry_userdefinition
   "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/ScanMatchingStatus.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/sentry_userdefinition
+)
+_generate_msg_eus(sentry_userdefinition
+  "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/LocalizationInfo.msg"
+  "${MSG_I_FLAGS}"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/sentry_userdefinition
 )
 
@@ -111,13 +130,13 @@ _generate_msg_eus(sentry_userdefinition
 _generate_srv_eus(sentry_userdefinition
   "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalMap.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/sentry_userdefinition
 )
 _generate_srv_eus(sentry_userdefinition
   "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/QueryGlobalLocalization.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/sentry_userdefinition
 )
 _generate_srv_eus(sentry_userdefinition
@@ -141,6 +160,8 @@ add_dependencies(sentry_userdefinition_generate_messages sentry_userdefinition_g
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/ScanMatchingStatus.msg" NAME_WE)
 add_dependencies(sentry_userdefinition_generate_messages_eus _sentry_userdefinition_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/LocalizationInfo.msg" NAME_WE)
+add_dependencies(sentry_userdefinition_generate_messages_eus _sentry_userdefinition_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalMap.srv" NAME_WE)
 add_dependencies(sentry_userdefinition_generate_messages_eus _sentry_userdefinition_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/QueryGlobalLocalization.srv" NAME_WE)
@@ -160,7 +181,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS sentry_userdefinition_generate_mess
 _generate_msg_lisp(sentry_userdefinition
   "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/ScanMatchingStatus.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/sentry_userdefinition
+)
+_generate_msg_lisp(sentry_userdefinition
+  "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/LocalizationInfo.msg"
+  "${MSG_I_FLAGS}"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/sentry_userdefinition
 )
 
@@ -168,13 +195,13 @@ _generate_msg_lisp(sentry_userdefinition
 _generate_srv_lisp(sentry_userdefinition
   "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalMap.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/sentry_userdefinition
 )
 _generate_srv_lisp(sentry_userdefinition
   "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/QueryGlobalLocalization.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/sentry_userdefinition
 )
 _generate_srv_lisp(sentry_userdefinition
@@ -198,6 +225,8 @@ add_dependencies(sentry_userdefinition_generate_messages sentry_userdefinition_g
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/ScanMatchingStatus.msg" NAME_WE)
 add_dependencies(sentry_userdefinition_generate_messages_lisp _sentry_userdefinition_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/LocalizationInfo.msg" NAME_WE)
+add_dependencies(sentry_userdefinition_generate_messages_lisp _sentry_userdefinition_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalMap.srv" NAME_WE)
 add_dependencies(sentry_userdefinition_generate_messages_lisp _sentry_userdefinition_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/QueryGlobalLocalization.srv" NAME_WE)
@@ -217,7 +246,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS sentry_userdefinition_generate_mess
 _generate_msg_nodejs(sentry_userdefinition
   "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/ScanMatchingStatus.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/sentry_userdefinition
+)
+_generate_msg_nodejs(sentry_userdefinition
+  "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/LocalizationInfo.msg"
+  "${MSG_I_FLAGS}"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/sentry_userdefinition
 )
 
@@ -225,13 +260,13 @@ _generate_msg_nodejs(sentry_userdefinition
 _generate_srv_nodejs(sentry_userdefinition
   "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalMap.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/sentry_userdefinition
 )
 _generate_srv_nodejs(sentry_userdefinition
   "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/QueryGlobalLocalization.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/sentry_userdefinition
 )
 _generate_srv_nodejs(sentry_userdefinition
@@ -255,6 +290,8 @@ add_dependencies(sentry_userdefinition_generate_messages sentry_userdefinition_g
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/ScanMatchingStatus.msg" NAME_WE)
 add_dependencies(sentry_userdefinition_generate_messages_nodejs _sentry_userdefinition_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/LocalizationInfo.msg" NAME_WE)
+add_dependencies(sentry_userdefinition_generate_messages_nodejs _sentry_userdefinition_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalMap.srv" NAME_WE)
 add_dependencies(sentry_userdefinition_generate_messages_nodejs _sentry_userdefinition_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/QueryGlobalLocalization.srv" NAME_WE)
@@ -274,7 +311,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS sentry_userdefinition_generate_mess
 _generate_msg_py(sentry_userdefinition
   "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/ScanMatchingStatus.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/String.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/sentry_userdefinition
+)
+_generate_msg_py(sentry_userdefinition
+  "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/LocalizationInfo.msg"
+  "${MSG_I_FLAGS}"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/sentry_userdefinition
 )
 
@@ -282,13 +325,13 @@ _generate_msg_py(sentry_userdefinition
 _generate_srv_py(sentry_userdefinition
   "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalMap.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/sentry_userdefinition
 )
 _generate_srv_py(sentry_userdefinition
   "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/QueryGlobalLocalization.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/sentry_userdefinition
 )
 _generate_srv_py(sentry_userdefinition
@@ -311,6 +354,8 @@ add_dependencies(sentry_userdefinition_generate_messages sentry_userdefinition_g
 
 # add dependencies to all check dependencies targets
 get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/ScanMatchingStatus.msg" NAME_WE)
+add_dependencies(sentry_userdefinition_generate_messages_py _sentry_userdefinition_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/LocalizationInfo.msg" NAME_WE)
 add_dependencies(sentry_userdefinition_generate_messages_py _sentry_userdefinition_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalMap.srv" NAME_WE)
 add_dependencies(sentry_userdefinition_generate_messages_py _sentry_userdefinition_generate_messages_check_deps_${_filename})

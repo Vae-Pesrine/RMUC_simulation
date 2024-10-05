@@ -43,7 +43,7 @@ void scanKeyboard() {
 }
 
 void scanAndPublish() {
-    std::cout << "\033[32mStart to scan keyboard" << "\033[32m" << std::endl;
+    ROS_INFO_STREAM("\033[32mStart to scan keyboard" << "\033[32m");
     geometry_msgs::Twist cmd_vel;
     while (ros::ok()) {
         scanKeyboard();

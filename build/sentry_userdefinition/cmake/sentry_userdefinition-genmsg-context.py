@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/ScanMatchingStatus.msg"
+messages_str = "/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/ScanMatchingStatus.msg;/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/LocalizationInfo.msg"
 services_str = "/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalMap.srv;/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/QueryGlobalLocalization.srv;/home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalLocalizationEngine.srv"
 pkg_name = "sentry_userdefinition"
 dependencies_str = "geometry_msgs;std_msgs;sensor_msgs"

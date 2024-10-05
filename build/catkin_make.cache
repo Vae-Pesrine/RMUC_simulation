@@ -1,2 +1,2 @@
-Point-LIO:fast_gicp:livox_ros_driver2:ndt_omp:sentry_localization:sentry_navigation:sentry_simulation:sentry_userdefinition:test_nodelet
--DCATKIN_WHITELIST_PACKAGES=sentry_localization -DCATKIN_DEVEL_PREFIX=/home/jgy/RMUC_simulation/devel -DCMAKE_INSTALL_PREFIX=/home/jgy/RMUC_simulation/install -G Unix Makefiles
+Point-LIO:fast_gicp:livox_ros_driver2:localization:ndt_omp:sentry_localization:sentry_navigation:sentry_simulation:sentry_userdefinition:test_nodelet
+-DCATKIN_WHITELIST_PACKAGES=localization -DCATKIN_DEVEL_PREFIX=/home/jgy/RMUC_simulation/devel -DCMAKE_INSTALL_PREFIX=/home/jgy/RMUC_simulation/install -G Unix Makefiles

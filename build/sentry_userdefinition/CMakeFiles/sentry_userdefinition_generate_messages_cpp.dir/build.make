@@ -67,32 +67,39 @@ include sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages
 include sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_cpp.dir/progress.make
 
 sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_cpp: /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/ScanMatchingStatus.h
+sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_cpp: /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/LocalizationInfo.h
 sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_cpp: /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/SetGlobalMap.h
 sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_cpp: /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/QueryGlobalLocalization.h
 sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_cpp: /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/SetGlobalLocalizationEngine.h
 
+/home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/LocalizationInfo.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/LocalizationInfo.h: /home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/LocalizationInfo.msg
+/home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/LocalizationInfo.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from sentry_userdefinition/LocalizationInfo.msg"
+	cd /home/jgy/RMUC_simulation/src/sentry_userdefinition && /home/jgy/RMUC_simulation/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/LocalizationInfo.msg -Isentry_userdefinition:/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p sentry_userdefinition -o /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition -e /opt/ros/noetic/share/gencpp/cmake/..
+
 /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/QueryGlobalLocalization.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/QueryGlobalLocalization.h: /home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/QueryGlobalLocalization.srv
-/home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/QueryGlobalLocalization.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/QueryGlobalLocalization.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/QueryGlobalLocalization.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/QueryGlobalLocalization.h: /opt/ros/noetic/share/sensor_msgs/msg/PointCloud2.msg
 /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/QueryGlobalLocalization.h: /opt/ros/noetic/share/sensor_msgs/msg/PointField.msg
 /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/QueryGlobalLocalization.h: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/QueryGlobalLocalization.h: /opt/ros/noetic/share/sensor_msgs/msg/PointCloud2.msg
+/home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/QueryGlobalLocalization.h: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/QueryGlobalLocalization.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/QueryGlobalLocalization.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/QueryGlobalLocalization.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from sentry_userdefinition/QueryGlobalLocalization.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from sentry_userdefinition/QueryGlobalLocalization.srv"
 	cd /home/jgy/RMUC_simulation/src/sentry_userdefinition && /home/jgy/RMUC_simulation/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/QueryGlobalLocalization.srv -Isentry_userdefinition:/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p sentry_userdefinition -o /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/ScanMatchingStatus.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/ScanMatchingStatus.h: /home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/ScanMatchingStatus.msg
-/home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/ScanMatchingStatus.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/ScanMatchingStatus.h: /opt/ros/noetic/share/geometry_msgs/msg/Transform.msg
-/home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/ScanMatchingStatus.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/ScanMatchingStatus.h: /opt/ros/noetic/share/std_msgs/msg/String.msg
 /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/ScanMatchingStatus.h: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/ScanMatchingStatus.h: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/ScanMatchingStatus.h: /opt/ros/noetic/share/geometry_msgs/msg/Transform.msg
+/home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/ScanMatchingStatus.h: /opt/ros/noetic/share/std_msgs/msg/String.msg
+/home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/ScanMatchingStatus.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/ScanMatchingStatus.h: /opt/ros/noetic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from sentry_userdefinition/ScanMatchingStatus.msg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from sentry_userdefinition/ScanMatchingStatus.msg"
 	cd /home/jgy/RMUC_simulation/src/sentry_userdefinition && /home/jgy/RMUC_simulation/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/ScanMatchingStatus.msg -Isentry_userdefinition:/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p sentry_userdefinition -o /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/SetGlobalLocalizationEngine.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
@@ -100,20 +107,21 @@ sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_cpp: /h
 /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/SetGlobalLocalizationEngine.h: /opt/ros/noetic/share/std_msgs/msg/String.msg
 /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/SetGlobalLocalizationEngine.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/SetGlobalLocalizationEngine.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from sentry_userdefinition/SetGlobalLocalizationEngine.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from sentry_userdefinition/SetGlobalLocalizationEngine.srv"
 	cd /home/jgy/RMUC_simulation/src/sentry_userdefinition && /home/jgy/RMUC_simulation/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalLocalizationEngine.srv -Isentry_userdefinition:/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p sentry_userdefinition -o /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition -e /opt/ros/noetic/share/gencpp/cmake/..
 
 /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/SetGlobalMap.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
 /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/SetGlobalMap.h: /home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalMap.srv
-/home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/SetGlobalMap.h: /opt/ros/noetic/share/sensor_msgs/msg/PointField.msg
-/home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/SetGlobalMap.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/SetGlobalMap.h: /opt/ros/noetic/share/sensor_msgs/msg/PointCloud2.msg
+/home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/SetGlobalMap.h: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/SetGlobalMap.h: /opt/ros/noetic/share/sensor_msgs/msg/PointField.msg
 /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/SetGlobalMap.h: /opt/ros/noetic/share/gencpp/msg.h.template
 /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/SetGlobalMap.h: /opt/ros/noetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from sentry_userdefinition/SetGlobalMap.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from sentry_userdefinition/SetGlobalMap.srv"
 	cd /home/jgy/RMUC_simulation/src/sentry_userdefinition && /home/jgy/RMUC_simulation/build/catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalMap.srv -Isentry_userdefinition:/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p sentry_userdefinition -o /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition -e /opt/ros/noetic/share/gencpp/cmake/..
 
 sentry_userdefinition_generate_messages_cpp: sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_cpp
+sentry_userdefinition_generate_messages_cpp: /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/LocalizationInfo.h
 sentry_userdefinition_generate_messages_cpp: /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/QueryGlobalLocalization.h
 sentry_userdefinition_generate_messages_cpp: /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/ScanMatchingStatus.h
 sentry_userdefinition_generate_messages_cpp: /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/SetGlobalLocalizationEngine.h

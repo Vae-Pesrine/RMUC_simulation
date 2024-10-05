@@ -14,7 +14,9 @@
                 "${workspaceFolder}/src/sentry_simulation/include/**",
                 "${workspaceFolder}/src/sentry_navigation/include/**",
                 "${workspaceFolder}/src/sentry_localization/include/**",
-                "${workspaceFolder}/devel/include/**"            ],
+                "${workspaceFolder}/devel/include/**",
+                "${workspaceFolder}/src/localization/include"
+            ],
             "name": "ROS",
             "intelliSenseMode": "gcc-x64",
             "compilerPath": "/usr/bin/gcc",

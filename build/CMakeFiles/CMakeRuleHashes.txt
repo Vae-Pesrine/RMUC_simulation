@@ -1,6 +1,7 @@
 # Hashes of file build rules.
 4f63492424703ebf03c57f009ba54436 /home/jgy/RMUC_simulation/devel/include/livox_ros_driver2/CustomMsg.h
 1402fce30970e16d58306d7c7366d4c1 /home/jgy/RMUC_simulation/devel/include/livox_ros_driver2/CustomPoint.h
+f88dc1cb0d07d763700347fa91181441 /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/LocalizationInfo.h
 6285a2d2d472c9f76b692a650c9b621a /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/QueryGlobalLocalization.h
 2801b52c55df863ed4a9d3e2ca113609 /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/ScanMatchingStatus.h
 6587adcc9b976258155bf09791415993 /home/jgy/RMUC_simulation/devel/include/sentry_userdefinition/SetGlobalLocalizationEngine.h
@@ -11,6 +12,7 @@ cf2597169b711063ba9c0da9e15a91b7 /home/jgy/RMUC_simulation/devel/lib/python3/dis
 6fbec59e602113876921456fc8d628ed /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/livox_ros_driver2/msg/_CustomMsg.py
 259f6f26f135fd59b2b83632b719d118 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/livox_ros_driver2/msg/_CustomPoint.py
 86b0783f6be4e84754e9a4874ab9450e /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/livox_ros_driver2/msg/__init__.py
+a4ea011e2f52a99df149d4930e7861b1 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_LocalizationInfo.py
 37676b6c434931fe40783d21117d2f8f /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/_ScanMatchingStatus.py
 a7989e7859a3f87b9ce390ed5452d84d /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/msg/__init__.py
 5a407313c204c3cf83d2229f38a1be51 /home/jgy/RMUC_simulation/devel/lib/python3/dist-packages/sentry_userdefinition/srv/_QueryGlobalLocalization.py
@@ -21,6 +23,7 @@ ec8fd6121dba9bd9a8529a7d918d2e8c /home/jgy/RMUC_simulation/devel/share/common-li
 9ad03b0d7310ae123d3cd54f95e00f38 /home/jgy/RMUC_simulation/devel/share/common-lisp/ros/livox_laser_simulation/msg/CustomPoint.lisp
 59d33ac336eb66ade3648440033be502 /home/jgy/RMUC_simulation/devel/share/common-lisp/ros/livox_ros_driver2/msg/CustomMsg.lisp
 4435c4ae1fe67190ea495d328d4b687d /home/jgy/RMUC_simulation/devel/share/common-lisp/ros/livox_ros_driver2/msg/CustomPoint.lisp
+f1588eda1540a2bfa8b7beeeda9b4d73 /home/jgy/RMUC_simulation/devel/share/common-lisp/ros/sentry_userdefinition/msg/LocalizationInfo.lisp
 5712e84503d36c668211a4a662c6a7d0 /home/jgy/RMUC_simulation/devel/share/common-lisp/ros/sentry_userdefinition/msg/ScanMatchingStatus.lisp
 038beecd2692c6ca129ed2cbfc00277d /home/jgy/RMUC_simulation/devel/share/common-lisp/ros/sentry_userdefinition/srv/QueryGlobalLocalization.lisp
 14b15b80271d6a520313f9ee90d6ae17 /home/jgy/RMUC_simulation/devel/share/common-lisp/ros/sentry_userdefinition/srv/SetGlobalLocalizationEngine.lisp
@@ -29,6 +32,7 @@ da07f7d6922ab31a605a4e16a7a088e8 /home/jgy/RMUC_simulation/devel/share/gennodejs
 f0ffd433e09f7f5e6425c17d01e6420a /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/livox_laser_simulation/msg/CustomPoint.js
 bedf993aac849c49bacf658476c8d081 /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/livox_ros_driver2/msg/CustomMsg.js
 abdec50f9cffbd9dfc638ea5a2bfc87d /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/livox_ros_driver2/msg/CustomPoint.js
+139721f4f5a03949170bd8628bf00638 /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/msg/LocalizationInfo.js
 d3452ee6f0ae985411c4f20048b36441 /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/msg/ScanMatchingStatus.js
 49d2fa25ce319d4cf85e26cee93423f1 /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/QueryGlobalLocalization.js
 29e793cec6d71f5ba5edc0943be401e6 /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/SetGlobalLocalizationEngine.js
@@ -41,6 +45,7 @@ b919ddf3f070672565cb475d3924e45c /home/jgy/RMUC_simulation/devel/share/roseus/ro
 125f28fb08b058415d21d49117ff305c /home/jgy/RMUC_simulation/devel/share/roseus/ros/livox_ros_driver2/msg/CustomPoint.l
 ed1c935922f7998f2f00c509fd102546 /home/jgy/RMUC_simulation/devel/share/roseus/ros/point_lio/manifest.l
 da08b92639ccabc80ad2cc03bd04c484 /home/jgy/RMUC_simulation/devel/share/roseus/ros/sentry_userdefinition/manifest.l
+d1ae3f6a87cf0714b80130163ec6483b /home/jgy/RMUC_simulation/devel/share/roseus/ros/sentry_userdefinition/msg/LocalizationInfo.l
 48560b36a51f0b646d2dc61b8852cce4 /home/jgy/RMUC_simulation/devel/share/roseus/ros/sentry_userdefinition/msg/ScanMatchingStatus.l
 3c7ba16530d1f6a27aeec7661e9fb1a1 /home/jgy/RMUC_simulation/devel/share/roseus/ros/sentry_userdefinition/srv/QueryGlobalLocalization.l
 10971a1d5fbb1419096f65146f2bf8d5 /home/jgy/RMUC_simulation/devel/share/roseus/ros/sentry_userdefinition/srv/SetGlobalLocalizationEngine.l

@@ -67,46 +67,53 @@ include sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages
 include sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_nodejs.dir/progress.make
 
 sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_nodejs: /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/msg/ScanMatchingStatus.js
+sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_nodejs: /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/msg/LocalizationInfo.js
 sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_nodejs: /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/SetGlobalMap.js
 sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_nodejs: /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/QueryGlobalLocalization.js
 sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_nodejs: /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/SetGlobalLocalizationEngine.js
 
+/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/msg/LocalizationInfo.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/msg/LocalizationInfo.js: /home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/LocalizationInfo.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from sentry_userdefinition/LocalizationInfo.msg"
+	cd /home/jgy/RMUC_simulation/build/sentry_userdefinition && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/LocalizationInfo.msg -Isentry_userdefinition:/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p sentry_userdefinition -o /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/msg
+
 /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/msg/ScanMatchingStatus.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/msg/ScanMatchingStatus.js: /home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/ScanMatchingStatus.msg
-/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/msg/ScanMatchingStatus.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/msg/ScanMatchingStatus.js: /opt/ros/noetic/share/geometry_msgs/msg/Transform.msg
-/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/msg/ScanMatchingStatus.js: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/msg/ScanMatchingStatus.js: /opt/ros/noetic/share/std_msgs/msg/String.msg
 /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/msg/ScanMatchingStatus.js: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from sentry_userdefinition/ScanMatchingStatus.msg"
+/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/msg/ScanMatchingStatus.js: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/msg/ScanMatchingStatus.js: /opt/ros/noetic/share/geometry_msgs/msg/Transform.msg
+/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/msg/ScanMatchingStatus.js: /opt/ros/noetic/share/std_msgs/msg/String.msg
+/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/msg/ScanMatchingStatus.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from sentry_userdefinition/ScanMatchingStatus.msg"
 	cd /home/jgy/RMUC_simulation/build/sentry_userdefinition && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/jgy/RMUC_simulation/src/sentry_userdefinition/msg/ScanMatchingStatus.msg -Isentry_userdefinition:/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p sentry_userdefinition -o /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/msg
 
 /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/QueryGlobalLocalization.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/QueryGlobalLocalization.js: /home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/QueryGlobalLocalization.srv
-/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/QueryGlobalLocalization.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/QueryGlobalLocalization.js: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/QueryGlobalLocalization.js: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/QueryGlobalLocalization.js: /opt/ros/noetic/share/sensor_msgs/msg/PointCloud2.msg
 /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/QueryGlobalLocalization.js: /opt/ros/noetic/share/sensor_msgs/msg/PointField.msg
 /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/QueryGlobalLocalization.js: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from sentry_userdefinition/QueryGlobalLocalization.srv"
+/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/QueryGlobalLocalization.js: /opt/ros/noetic/share/sensor_msgs/msg/PointCloud2.msg
+/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/QueryGlobalLocalization.js: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/QueryGlobalLocalization.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from sentry_userdefinition/QueryGlobalLocalization.srv"
 	cd /home/jgy/RMUC_simulation/build/sentry_userdefinition && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/QueryGlobalLocalization.srv -Isentry_userdefinition:/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p sentry_userdefinition -o /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv
 
 /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/SetGlobalLocalizationEngine.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/SetGlobalLocalizationEngine.js: /home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalLocalizationEngine.srv
 /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/SetGlobalLocalizationEngine.js: /opt/ros/noetic/share/std_msgs/msg/String.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from sentry_userdefinition/SetGlobalLocalizationEngine.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from sentry_userdefinition/SetGlobalLocalizationEngine.srv"
 	cd /home/jgy/RMUC_simulation/build/sentry_userdefinition && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalLocalizationEngine.srv -Isentry_userdefinition:/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p sentry_userdefinition -o /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv
 
 /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/SetGlobalMap.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/SetGlobalMap.js: /home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalMap.srv
-/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/SetGlobalMap.js: /opt/ros/noetic/share/sensor_msgs/msg/PointField.msg
-/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/SetGlobalMap.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/SetGlobalMap.js: /opt/ros/noetic/share/sensor_msgs/msg/PointCloud2.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from sentry_userdefinition/SetGlobalMap.srv"
+/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/SetGlobalMap.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/SetGlobalMap.js: /opt/ros/noetic/share/sensor_msgs/msg/PointField.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/jgy/RMUC_simulation/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from sentry_userdefinition/SetGlobalMap.srv"
 	cd /home/jgy/RMUC_simulation/build/sentry_userdefinition && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/jgy/RMUC_simulation/src/sentry_userdefinition/srv/SetGlobalMap.srv -Isentry_userdefinition:/home/jgy/RMUC_simulation/src/sentry_userdefinition/msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p sentry_userdefinition -o /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv
 
 sentry_userdefinition_generate_messages_nodejs: sentry_userdefinition/CMakeFiles/sentry_userdefinition_generate_messages_nodejs
+sentry_userdefinition_generate_messages_nodejs: /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/msg/LocalizationInfo.js
 sentry_userdefinition_generate_messages_nodejs: /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/msg/ScanMatchingStatus.js
 sentry_userdefinition_generate_messages_nodejs: /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/QueryGlobalLocalization.js
 sentry_userdefinition_generate_messages_nodejs: /home/jgy/RMUC_simulation/devel/share/gennodejs/ros/sentry_userdefinition/srv/SetGlobalLocalizationEngine.js
